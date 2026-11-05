@@ -158,6 +158,49 @@ preview and its three documented skills. It does not add managed-payment tools
 to the optional OpenAI copilot. Public package and official Registry publication
 remain pending; no hosted execution endpoint is provided by this website.
 
+## US/USD Funding hub
+
+The local Funding hub includes an installed Circle Onramp Kit 1.0.8 embedded
+sandbox integration. A live provider session and a verified deposit remain
+pending. This public website documents the feature; it does not host a payment
+session or collect wallet, identity or payment details.
+
+The embedded sandbox is separate from an external handoff to the official Arc
+Portal for real-money USDC purchases. The existing MATEx payment workflows stay
+on testnet. Real funds sent through an external provider do not fund a MATEx
+testnet token, credit balance or converter.
+
+The sandbox session flow uses a separate server-only sandbox credential, an
+EIP-191 wallet-ownership proof and a widget asset filter for USDC and Arc. The
+proof establishes control of the selected wallet; it does not authorize a
+purchase, transfer or agent spending. Wallet review remains with the owner.
+
+Use dummy details only in sandbox, never real identity or payment information.
+Sandbox moves no real funds. Its bank-transfer test currently delivers test
+tokens only on Ethereum, so that result does not demonstrate funding on Arc
+testnet. Widget callbacks are not settlement evidence; the expected deposit
+must be confirmed independently on the correct network before any credit.
+
+US/USD is the initial target market, not a claim of user eligibility. Providers
+independently determine supported US states, payment methods, identity checks
+and business onboarding. Production card and wallet-pay availability depends
+on the provider and required KYB/domain registration. Provider fees and network
+costs are separate from MATEx's service markup.
+
+Direct Arc off-ramp support remains unverified. The planned cash-out route is
+separately owner-reviewed CCTP bridging from Arc USDC to Base USDC, followed by
+eligible Coinbase USD checkout. This route is not implemented. No bridge,
+cash-out or MGAS redemption is enabled or guaranteed by the local integration.
+The one-way test-USDC-to-tMGAS converter does not establish redemption rights.
+
+Official integration references:
+
+- [Circle Onramp widget quickstart](https://docs.arc.io/app-kit/quickstarts/onramp-embed-widget)
+- [Onramp sandbox and hosting requirements](https://docs.arc.io/app-kit/references/onramp-hosting-requirements)
+- [Arc Onramp terms and provider scope](https://www.arc.io/legal/onramp)
+- [Coinbase Offramp overview](https://docs.cdp.coinbase.com/onramp/offramp/offramp-overview)
+- [Coinbase live country, state and asset configuration](https://docs.cdp.coinbase.com/onramp/offramp/configurations)
+
 ## Optional local OpenAI copilot
 
 A separate local chat uses the operator's configured OpenAI connection. It has
