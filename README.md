@@ -15,6 +15,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 ## Scope
 
 - Responsive project landing page and printable project brief.
+- Narrated 100-second product demo with English captions, a public transcript link and the verified internal Arc testnet conversion receipt.
 - Clearly labelled interactive illustration of Arc USDC and MGAS shared-credit payment flows.
 - Existing MATEx double-M identity with charcoal, green, cream and warm metallic accents.
 - Links to this repository and official Circle documentation.

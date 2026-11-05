@@ -1,0 +1,115 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:02.532
+Gas balances are fragmented across networks.
+
+2
+00:00:02.532 --> 00:00:05.456
+Funding wallets and swapping tokens add extra steps.
+
+3
+00:00:05.456 --> 00:00:09.770
+For traders and AI agents, a missing gas balance can stall the
+next transaction.
+
+4
+00:00:10.200 --> 00:00:12.327
+One gas token for every network.
+
+5
+00:00:12.327 --> 00:00:16.240
+That is the goal behind MateX GAS and its smart-contract
+architecture.
+
+6
+00:00:17.200 --> 00:00:19.573
+Token and vault contracts anchor the design.
+
+7
+00:00:19.573 --> 00:00:24.803
+Funded sponsors would pay each network’s native gas, with
+owner approvals and matched receipts.
+
+8
+00:00:24.803 --> 00:00:26.780
+Broader dispatch remains in development.
+
+9
+00:00:27.200 --> 00:00:31.168
+Bring your own wallet and your own AI agent through the MCP
+plugin.
+
+10
+00:00:31.168 --> 00:00:33.140
+You review and approve each payment.
+
+11
+00:00:35.200 --> 00:00:42.394
+On Arc testnet, our internal conversion is now verified: one
+test USDC paid for one hundred tMGAS.
+
+12
+00:00:42.394 --> 00:00:46.140
+The buyer received the tokens, and both allowances finished at
+zero.
+
+13
+00:00:48.200 --> 00:00:53.156
+Circle Facilitator Service supports our separate Arc USDC
+checkout through x402.
+
+14
+00:00:53.156 --> 00:00:55.288
+Buyer and seller approvals stay explicit.
+
+15
+00:00:55.288 --> 00:00:56.780
+This flow is an illustration.
+
+16
+00:00:57.200 --> 00:01:06.330
+Our separate Base Sepolia record shows an agent-wallet
+operation and a matched 0.004632 tMGAS charge, rechecked by
+our team.
+
+17
+00:01:08.200 --> 00:01:09.321
+Trading comes next.
+
+18
+00:01:09.321 --> 00:01:13.876
+Inspect downloadable Bitcoin history, UTC coverage and exact
+file checksums.
+
+19
+00:01:13.876 --> 00:01:16.780
+These are historical inputs, not live trading results.
+
+20
+00:01:17.200 --> 00:01:23.770
+Explore Ethereum and Solana perpetuals, mark prices and
+funding history, with different-venue assumptions clearly
+disclosed.
+
+21
+00:01:24.200 --> 00:01:28.815
+Compare fixed strategies after fees and slippage, including
+losing candidates.
+
+22
+00:01:28.815 --> 00:01:32.700
+Read drawdown and tougher cost scenarios before drawing
+conclusions.
+
+23
+00:01:33.200 --> 00:01:34.212
+MateX GAS.
+
+24
+00:01:34.212 --> 00:01:36.962
+One shared gas vision for users and agents.
+
+25
+00:01:36.962 --> 00:01:39.230
+Explore the evidence, and build with us.
