@@ -1,0 +1,156 @@
+{
+  "frozen_utc": "2026-11-05T21:00:58.269602+00:00",
+  "protocol_version": "matex-perps-round2-20261105-v1",
+  "assets": {
+    "ETH": {
+      "sz_decimals": 4,
+      "max_leverage": 25.0,
+      "maintenance_margin_rate": 0.02
+    },
+    "SOL": {
+      "sz_decimals": 2,
+      "max_leverage": 20.0,
+      "maintenance_margin_rate": 0.025
+    }
+  },
+  "candidate_descriptions": {
+    "r2_vwap_trend": "15m session HLC3-volume VWAP recross, with latest completed 4h EMA50/100 direction and close beyond EMA100; 1.5x15m ATR14 stop, 2.5R target, maximum32 bars (8h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_vwap_fade": "Latest completed-hour ADX14<18; 15m close re-enters session VWAP +/-2 volume-weighted SD, comparing prior close/prior band and current close/current band; 1.5x15m ATR14 stop, frozen VWAP target requiring>=1.5R, maximum16 bars (4h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_rsi2_exhaustion": "Completed-hour RSI2 first crosses below5 with latest completed4h close>EMA100 (long), or above95 with4h close<EMA100 (short); 2xhourly ATR14 stop, frozen hourly SMA5 target requiring>=1R, maximum48 bars (12h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_shock_reversal": "Previous completed hour has abs(close-open)>=3xATR14 from the hour before it and volume>=2xmedian of20 prior hours excluding shock; current hour has opposite candle color and closes above shock close for long/below shock close for short (no midpoint requirement); two-bar extreme plus0.25xcurrent hourly ATR14 stop, frozen shock-open target requiring>=1R, maximum32 bars (8h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_compression_breakout": "Previous4h ATR14/close<=20th percentile of60 prior ratios excluding compression (sorted floor(.2*(n-1))); current4h close breaks prior12 highs/lows and volume>1.5xprior20 mean; 2x4h ATR14 stop, 4xATR target, maximum288 bars (72h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_slow_ema_cross": "Actual completed4h EMA20/EMA100 cross, symmetric long/short; 2x4h ATR14 stop, 6xATR target, maximum672 bars (7days). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_daily_momentum": "Completed-day7day and28day returns transition from non-aligned to both positive or both negative; 1.5xdaily ATR14 stop, 3xATR target, maximum672 bars (7days). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_breakout_retest": "Previous4h close breaks20-bar high/low excluding previous/current; current4h retests that edge and closes beyond it with EMA20/100 aligned; current extreme plus0.5x4h ATR14 stop, 3R target, maximum288 bars (72h). Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_overnight_rejection": "First06:00-11:59UTC15m wick outside and close back inside complete00:00-05:59UTC24bar box, ignoring both-edge sweeps; wick plus0.25x15m ATR14 stop, frozen box midpoint target requiring>=1.5R, maximum24 bars (6h), one signal/day. Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar.",
+    "r2_regime_router": "Latest completed4h ADX14>=25 selects r2_vwap_trend; ADX14<=18 selects r2_vwap_fade with its hourly ADX<18 filter; intermediate regime stays flat. Branch exits and maximum32/16bars are unchanged. Closed-bar levels, next-15m-open entry, all UTC hours allowed. Target reward >=3 times signal-close roundtrip 0.045% fees plus 2bps slippage per side. Hourly/4h/daily indicators require 220/120/60 completed bars respectively; VWAP requires at least eight completed same-UTC-day 15m bars and a same-day previous bar."
+  },
+  "windows": {
+    "development": [
+      "2024-02-01",
+      "2025-07-01"
+    ],
+    "validation": [
+      "2025-07-01",
+      "2026-01-01"
+    ],
+    "reused_test": [
+      "2026-01-01",
+      "2026-10-01"
+    ],
+    "reused_recent": [
+      "2026-10-01",
+      "2026-10-21"
+    ],
+    "later_check": [
+      "2026-10-21",
+      "2026-11-05"
+    ]
+  },
+  "base_config": {
+    "starting_cash": 20.0,
+    "leverage": 5.0,
+    "fee_rate": 0.00045,
+    "slippage_bps": 2.0,
+    "risk_fraction": 0.05,
+    "margin_fraction": 0.75,
+    "max_notional": 150.0,
+    "min_notional": 10.0,
+    "sz_decimals": 4,
+    "maintenance_margin_rate": 0.02,
+    "max_leverage": 25.0,
+    "fallback_hourly_funding": 1.25e-05,
+    "stress_hourly_funding": null,
+    "daily_loss_fraction": 0.15,
+    "equity_floor": 5.0,
+    "max_entries_per_day": 2
+  },
+  "schedule": {
+    "flatten_daily": false,
+    "entry_cutoff_hour": 24,
+    "max_hold_bars": 672,
+    "funding_reserve_full_hold": true
+  },
+  "leverage": 5,
+  "cases": [
+    "baseline",
+    "stress"
+  ],
+  "stress": {
+    "slippage_bps": 8,
+    "stress_hourly_funding": 0.0001
+  },
+  "comparisons": {
+    "fresh_window_runs": 200,
+    "continuous_runs": 40,
+    "csv_rows": 240,
+    "selected_detail_replays": "Same exact selected cases are replayed for full logs; these are not new hypotheses or extra independent evidence."
+  },
+  "selection": {
+    "eligible": "At baseline 5x: positive development and validation net P&L, at least 30 completed trades in EACH of development and validation. Rank eligible candidates by validation net P&L, then validation trades, then declared order.",
+    "failed_fallback": "If none qualifies, display highest validation net P&L with at least 30 validation trades as failed_screen_fallback, even if development has fewer than 30 trades.",
+    "insufficient_sample": "If none has 30 validation trades, display the highest validation net P&L with any validation trades as insufficient_sample; if none trades, select nothing.",
+    "forbidden": "Later periods, cost stress and continuous outcomes cannot change candidate selection or parameters."
+  },
+  "consistency": {
+    "all_periods_positive": "Net P&L strictly greater than zero and at least one completed trade in every fresh-account window; breakeven and no-trade windows fail.",
+    "sufficient_consistency_min_trades": {
+      "development": 30,
+      "validation": 30,
+      "reused_test": 20,
+      "reused_recent": 3,
+      "later_check": 3
+    },
+    "stress": "Apply the same positivity and sample rules to all five stressed fresh-account windows.",
+    "continuous": "Separately report whether every marked equity delta in one uninterrupted account is strictly positive, baseline and stress. This does not replace fresh-window sample checks."
+  },
+  "continuous": {
+    "start": "2024-02-01",
+    "end_exclusive": "2026-11-05",
+    "starting_cash": 20,
+    "resets": 0,
+    "period_accounting": "Consecutive close-marked boundary equity differences, including carried positions; full-run fees/funding only."
+  },
+  "timing": "Closed-candle signals, next 15m open entries, no forced midnight liquidation, maximum two entries per UTC day, at most 672 bars per position. No future rate is used to select a trade.",
+  "warmup": {
+    "source_start": "2024-01-01",
+    "hourly_prior_bars": 220,
+    "four_hour_prior_bars": 120,
+    "daily_prior_bars": 60,
+    "daily_development_first_month": "No-entry warmup is retained inside the fixed development window; earliest possible daily signal is March 1 close, next entry March 2 UTC."
+  },
+  "funding": "Observed signed hourly Hyperliquid rates at UTC opens for carried positions; Binance mark-open proxies unavailable oracle prices. Missing observations use adverse 0.00125%/hour; stress always adverse 0.01%/hour.",
+  "liquidation": "Conservative loss of remaining isolated collateral, preserving unrelated free cash. Small-notional mainnet MMR held fixed: ETH 2%, SOL 2.5%.",
+  "evidence": "New rules fixed before this round calculates returns. ALL periods are reused/adaptive; consistency remains retrospective, not a future-profit claim.",
+  "limitations": [
+    "Research only. No wallet, order, account-permission or live leverage changes.",
+    "Binance USD-M trade and mark candles proxy Hyperliquid execution and liquidation. This is not a single-venue reconstruction.",
+    "Observed Hyperliquid funding uses Binance mark-open as an oracle-price proxy; exact historical oracle prices are unavailable.",
+    "Hourly funding is settled at the open for carried positions, before new entries. Scheduled preceding-close exits precede settlement; exact same-time matching cannot be reconstructed.",
+    "Missing funding uses an explicit adverse 0.00125% per hour for either direction; stress uses adverse 0.01% per hour.",
+    "Liquidation conservatively loses remaining isolated collateral. Actual order-book liquidation may retain some margin; no liquidation clearance fee is added.",
+    "Known open gap exits precede later mark extremes. When intrabar order is unknown, liquidation precedes stops, and stops precede targets.",
+    "Current mainnet quantity precision and small-notional maintenance tiers are held constant historically. Testnet and historical tiers can differ.",
+    "Drawdown is marked at 15-minute closes and modeled exits, not tick-by-tick. Failed stops, latency and market depth are unavailable.",
+    "Each run starts with fresh collateral and ends flat. Separate ETH/SOL runs are not a simultaneous shared-$20 portfolio.",
+    "The $20 is assumed already deposited collateral. Deposit, withdrawal, bridge, network and tax costs are excluded.",
+    "This is adaptive round-two research: every calendar period, including October 21-November 4, was examined previously. None is an untouched or prospective test.",
+    "Ten new fixed hypotheses and two assets are disclosed, with no parameter tuning or leverage search after returns. Baseline leverage is 5x throughout.",
+    "Round two permits positions across UTC midnight for up to seven days. Entries are allowed all UTC hours. This differs from the original daily-flat study.",
+    "Sizing reserves funding for at least 24 hours or the full planned holding limit, whichever is longer. Other account, risk, margin and minimum-order rules are unchanged.",
+    "Daily momentum requires 60 prior completed daily candles, but source history starts January 1, 2024 and development starts February 1. Its first development month is therefore no-entry warmup; that flat period stays in the reported development ROI. No dates are shifted or synthetic context added.",
+    "Candidate selection uses baseline development eligibility and validation ranking only. Later windows, stress and continuous outcomes cannot change selection.",
+    "Strict all-period positivity requires positive net P&L and at least one completed trade in each fresh-account window. The stronger sample screen requires 30 development, 30 validation, 20 reused-test and three trades in each short window.",
+    "A positive short window with three trades remains a small historical sample, not evidence of a durable live edge.",
+    "Fresh-window tests each start with $20 and force an evaluation-end exit. Continuous cases start once with $20 and carry account state and open positions across all five boundaries without funding or cash resets.",
+    "Continuous period changes are close-marked equity deltas including open positions. Fees and funding are reported for the full continuous run, not allocated across periods from completed trade logs.",
+    "Adverse-cost stress reruns the full strategy and sizing with 8bps slippage per fill and an adverse 0.01% hourly funding charge in either direction. Its changed sizing means it is not a fee-only subtraction from baseline trades.",
+    "USDT prices and USDC collateral are treated at dollar parity. Depeg and conversion costs are excluded alongside deposits, withdrawals, bridges, network fees and tax."
+  ],
+  "sources": {
+    "prices": "https://github.com/binance/binance-public-data",
+    "fees": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+    "funding": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+    "liquidations": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations"
+  }
+}

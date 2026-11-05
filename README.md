@@ -65,3 +65,7 @@ The static directory is `dist/`. `.openai/hosting.json` binds the managed Site i
 ## Leveraged ETH/SOL research — November 5, 2026
 
 The public trading-data page now links the complete $20 perpetuals study: ten fixed hypotheses, notional fees, hourly funding, minimum orders and conservative isolated liquidation. Neither asset passed the development-and-validation screen. The 156-row comparison CSV and full selected-case evidence ZIP preserve failures, cost stress and mixed-venue data limitations. Private platform source is excluded.
+
+## Perpetual research round two
+
+Ten additional fixed strategies, including VWAP and multi-day momentum, bring the local catalogue to twenty. The Python research MCP remains eleven tools. Overnight funding reserves and uninterrupted $20 accounts complement fresh-window comparisons. All 240 comparison rows, fixed rules and failed cases are public at `/trading-data.html#perps-round2`. No strategy was profitable in all five reused periods under baseline or stress. Original study files are retained. Private platform source and wallet capabilities are excluded.

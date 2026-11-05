@@ -293,3 +293,7 @@ Website source: https://github.com/The11-11/matex-gas-site
 ## Leveraged perpetual research
 
 The separate MateX research MCP now exposes eleven tools, including perpetual metadata and bounded ETH/SOL backtests. The GAS preview remains separate. The local dedicated research lab includes $20 capital, fees on notional, funding and isolated liquidation; it cannot place trades. Ten fixed candidates were evaluated with validation-only ranking, followed by later-period and leverage/cost stress. Neither asset passed the development-and-validation screen. Public evidence is at `/trading-data.html#leveraged-perps`; full price/oracle proxies, REST repairs, margin and close-marked drawdown limits remain attached.
+
+## Perpetual research round two
+
+Ten additional fixed strategies, including VWAP and multi-day momentum, bring the local catalogue to twenty. The Python research MCP remains eleven tools. Overnight funding reserves and uninterrupted $20 accounts complement fresh-window comparisons. All 240 comparison rows, fixed rules and failed cases are public at `/trading-data.html#perps-round2`. No strategy was profitable in all five reused periods under baseline or stress. Original study files are retained. Private platform source and wallet capabilities are excluded.
