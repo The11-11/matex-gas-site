@@ -82,6 +82,82 @@ Readiness is not evidence of successful sponsored execution.
 The three documented skills cover a subset of the 15 connector tools. The local
 registry is a project-owned resource, not an official global skill listing.
 
+## Agent Control Center
+
+The local Control Center implements owner-approved policies for the new managed
+Arc-report connector. A policy sets the agent's per-request, daily and weekly
+USDC limits, allowed report services, report networks, seller recipients and
+expiry. Its owner can pause requests or rotate the private agent connection
+key through a fresh wallet review.
+
+Budgets use six-decimal USDC service payments and UTC day/week windows. They
+exclude separate native network fees. Open reservations stay counted across
+window changes until payment is verified or the backend proves an authorization
+cannot spend. A reservation is not a payment. Pausing blocks new authorizations
+but cannot reverse a payment already submitted.
+
+These controls apply only to requests made through this registered-agent report
+workflow. Existing manual and legacy connectors remain separate. Signing a
+policy does not give the agent a wallet signing key or enable unattended spending.
+Each report still needs the buyer and seller wallet approvals described below.
+
+## Managed Arc USDC reports
+
+The new local workflow connects useful backtest and reconciliation reports to
+exact Arc testnet USDC checkout. Its prices are separate from Base MGAS credits:
+
+| Report | Base price | 10% markup | Exact payment |
+| --- | --- | --- | --- |
+| Historical backtest | 0.050 test USDC | 0.005 test USDC | 0.055 test USDC |
+| Transaction check | 0.010 test USDC | 0.001 test USDC | 0.011 test USDC |
+
+Report preparation freezes the selected inputs and their hash. A registered
+agent reserves its permitted budget for that exact report and returns the
+original human review link. Its maximum must cover the fixed price and fit the
+active owner policy. The report's subject network is separate from the Arc
+payment network.
+
+The buyer authorizes the exact USDC collection, then the separate seller reviews
+the Circle settlement proof. The backend verifies canonical transaction, token
+transfer and authorization evidence before recording payment and running the
+frozen report. Delivery returns the result with matching payment and delivery
+receipts, including the frozen input and result hashes.
+
+An uncertain payment keeps its original request and budget hold. It is not reset
+or automatically resent. If report delivery fails after payment, the charge
+remains recorded; the same paid job can retry delivery without another payment.
+This workflow does not perform an automatic refund or convert USDC into MGAS.
+
+Canonical payment verification and receipt-bound report delivery are tested with
+cryptographic fixtures. A live user-wallet policy activation and paid report
+purchase have not yet been demonstrated. These are implementation checks, not
+external usage, revenue or an independent audit.
+
+## Separate authenticated managed MCP preview
+
+This connector exposes four tools over local stdio:
+
+- `matex_managed_status`: the registered agent's policy and remaining budgets.
+- `matex_managed_catalog`: fixed report prices and available local datasets.
+- `matex_managed_request`: one bounded report request and human review link.
+- `matex_managed_get`: the original result, payment and delivery evidence.
+
+Developers with workspace access approve an agent policy in the local Control
+Center, then reveal or copy the agent connection key only for a trusted MCP
+client. The key is shown once; the server stores its hash. The registered agent
+identity and private capability belong in the local client environment. Never
+put the capability in a model prompt, tool argument, URL or published example.
+
+Discover the actual tool schemas before use, keep one stable key for each exact
+report intent and return the original wallet review to the owner. The connector
+cannot change policy, approve a payment, sign, submit a wallet transaction or
+trade. A connection key does not replace the human buyer and seller approvals.
+
+The four-tool managed connector is separate from the existing 15-tool keyless
+preview and its three documented skills. It does not add managed-payment tools
+to the optional OpenAI copilot. Public package and official Registry publication
+remain pending; no hosted execution endpoint is provided by this website.
+
 ## Optional local OpenAI copilot
 
 A separate local chat uses the operator's configured OpenAI connection. It has

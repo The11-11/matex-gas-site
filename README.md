@@ -16,6 +16,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 
 - Responsive project landing page and printable project brief.
 - Developer feature status, three local agent skills, the 15-tool MCP preview and downloadable developer notes.
+- Registered-agent policy budgets and Arc USDC paid reports through a separate four-tool local connector, with live wallet proof clearly marked pending.
 - Narrated 100-second product demo with English captions, a public transcript link and the verified internal Arc testnet conversion receipt.
 - Clearly labelled interactive illustration of Arc USDC and MGAS shared-credit payment flows.
 - Existing MATEx double-M identity with charcoal, green, cream and warm metallic accents.
