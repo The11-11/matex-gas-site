@@ -1,0 +1,117 @@
+{
+  "service": "backtest",
+  "version": 1,
+  "mode": "historical-simulation",
+  "inputHash": "b98f8818a508655b174d1bd354dd1c4bca5cded70c6e678f045d1b319f48cdf6",
+  "dataset": {
+    "candleCount": 500,
+    "candlesSha256": "3c26ef706fd29cc200469d6c24d4c6da3c3d5b5d4f0c933fc40f6e56428b66c4",
+    "firstTs": 1700000000,
+    "gapCount": 0,
+    "id": "sample",
+    "intervalSeconds": 3600,
+    "label": "Bundled sample candles (demonstration data)",
+    "lastTs": 1701796400,
+    "sourceKind": "bundled-sample",
+    "sourceSha256": "e0efb49972a1ef14b263a5c5952b23b71a427bc0cfce768d4b49d3d58e05566d",
+    "symbol": "SAMPLE-BTCUSD"
+  },
+  "strategy": {
+    "name": "rsi_reversion",
+    "params": {
+      "entry": 30,
+      "exit": 55,
+      "period": 14
+    }
+  },
+  "assumptions": {
+    "executionModel": "next-open-spot",
+    "feeRate": 0.0006,
+    "leverage": 1,
+    "liquidateAtEnd": true,
+    "maxDrawdown": 0.25,
+    "positionFraction": 0.95,
+    "slippageBps": 5,
+    "startingCash": 20,
+    "stopLoss": 0.05
+  },
+  "scenarios": {
+    "zeroCost": {
+      "feeRate": 0,
+      "slippageBps": 0,
+      "startingCash": 20,
+      "finalEquity": 15.153661655125,
+      "netPnl": -4.846338344875,
+      "returnPct": -24.23169172,
+      "maxDrawdownPct": 25.1,
+      "completedTrades": 7,
+      "fillCount": 14,
+      "winRatePct": 14.3,
+      "feesPaid": 0,
+      "slippageCost": 0,
+      "haltedByRisk": true,
+      "drawdownHalts": 1
+    },
+    "baseline": {
+      "feeRate": 0.0006,
+      "slippageBps": 5,
+      "startingCash": 20,
+      "finalEquity": 14.957270436278,
+      "netPnl": -5.042729563722,
+      "returnPct": -25.21364782,
+      "maxDrawdownPct": 25.99,
+      "completedTrades": 7,
+      "fillCount": 14,
+      "winRatePct": 14.3,
+      "feesPaid": 0.135909882838,
+      "slippageCost": 0.113257037307,
+      "haltedByRisk": true,
+      "drawdownHalts": 1
+    },
+    "stress": {
+      "feeRate": 0.0012,
+      "slippageBps": 10,
+      "startingCash": 20,
+      "finalEquity": 15.068236737693,
+      "netPnl": -4.931763262307,
+      "returnPct": -24.65881631,
+      "maxDrawdownPct": 25.37,
+      "completedTrades": 7,
+      "fillCount": 14,
+      "winRatePct": 14.3,
+      "feesPaid": 0.270315087115,
+      "slippageCost": 0.225258136406,
+      "haltedByRisk": true,
+      "drawdownHalts": 1
+    }
+  },
+  "buyHold": {
+    "feeRate": 0.0006,
+    "slippageBps": 5,
+    "startingCash": 20,
+    "finalEquity": 16.470698826163,
+    "netPnl": -3.529301173837,
+    "returnPct": -17.64650587,
+    "maxDrawdownPct": 34.68,
+    "completedTrades": 1,
+    "fillCount": 2,
+    "winRatePct": 0,
+    "feesPaid": 0.020681156192,
+    "slippageCost": 0.01723342398,
+    "haltedByRisk": false,
+    "drawdownHalts": 0,
+    "entryTs": 1700003600,
+    "policy": "95% cash, enter at second candle open, hold to final close; no stop or drawdown halt"
+  },
+  "comparison": {
+    "zeroCostMinusBaselineEquity": 0.196391218847,
+    "baselineMinusStressEquity": -0.110966301415
+  },
+  "notes": [
+    "Historical spot simulation at 1x; leverage, shorts, perpetual funding and liquidation are unsupported.",
+    "Signals use closed candles and execute at the next open; remaining positions are sold at the final close with fees and slippage.",
+    "All scenarios use the same frozen candles and strategy settings. Costs can change sizing and risk exits, so equity differences are not a pure fee sum.",
+    "Stress doubles baseline costs, with minimum fee 0.0002 and slippage 5 bps, capped at fee 0.01 and slippage 100 bps.",
+    "Trading costs shown exclude the separate MATEx report-service charge and taxes. Historical results do not promise future profit."
+  ]
+}
