@@ -240,6 +240,34 @@ has no configured SPL mint or sponsor. Sponsored execution still requires token
 and sponsor configuration, sponsor funding and an actual verified transaction.
 Read-only checks and wallet connection do not establish that proof.
 
+## Trading research and paper recovery
+
+The local MateX trading dashboard and its separate nine-tool research MCP now
+accept explicit BTC, ETH or SOL selection, starting capital and per-fill
+slippage. Backtests, rolling walk-forward tests and execution comparisons use
+the source-specific symbol and a market-specific candle cache. Sample and
+generated data retain simulation labels. New journal records and exported
+reports retain effective market, account and cost assumptions.
+
+The 20-unit capital preset affects actual broker sizing. The model remains
+fractional spot simulation at 1×; venue minimums, perpetual funding and
+liquidation are not modelled. The buy-and-hold benchmark is labelled gross.
+Three months of real four-hour ETH and SOL candles exercised the running API
+with 20-unit simulation accounts, walk-forward validation and cost comparisons.
+This is internal functional evidence, not profitable-strategy or adoption proof.
+
+Paper accounts now process each available unseen closed candle in order after
+a polling interruption, using only the history available at that candle and
+checkpointing each step. Missing checkpoint history, changed checkpoint prices
+and detected cadence gaps reject a batch. A legacy single-new-bar feed may
+establish cadence from that interval; multi-bar catch-up requires earlier or
+saved cadence evidence. Closed-candle risk checks do not model intrabar stops.
+No actual exchange orders are replayed by this paper-account recovery.
+
+The nine-tool MateX research connector is separate from the 15-tool MATEx GAS
+preview and four-tool managed Arc report connector. Their payment scopes and
+current setup requirements remain as documented above.
+
 ## Separate accounting
 
 Arc tMGAS and the canonical Base tMGAS service-credit account are separate. A

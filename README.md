@@ -23,6 +23,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 - Existing MATEx double-M identity with charcoal, green, cream and warm metallic accents.
 - Links to this repository and official Circle documentation.
 - Verified Solana Devnet RPC readiness before operator setup, with separate wallet and sponsor status.
+- Market-aware BTC/ETH/SOL trading research with explicit capital and slippage, plus checked paper-trading candle recovery.
 - No wallet integration, payments, connected accounts, API credentials or data collection on the site.
 
 Current implementations and proposed milestones are distinguished. Arc user-signed settlement, public hosted execution and mainnet readiness are not claimed. The connector’s npm and MCP Registry publication is still pending.
