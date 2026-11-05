@@ -217,8 +217,18 @@ form, never chat or the MCP configuration. Wallet signing stays in the wallet.
 ## Solana status
 
 A MetaMask Solana wallet connection and read-only copilot checks have been
-verified. The browser flow returned the selected wallet's balance and missing
-mint/sponsor setup steps without preparing or sending a transaction.
+verified. The workspace also verifies Solana Devnet RPC identity before operator
+or token setup. Its local page now shows verified network connectivity, user
+wallet connection and sponsor/token setup as distinct statuses. A wallet's
+Devnet signing capability is checked from its advertised features; no CLI
+configuration is needed for the browser connection.
+
+The browser flow returned the selected wallet's balance and missing mint/sponsor
+setup steps without preparing or sending a transaction. Live Devnet network and
+wallet balance reads were rechecked on 5 November 2026. These remain connection
+evidence, not sponsored-execution receipts.
+
+Network reference: [Solana clusters and public endpoints](https://solana.com/docs/references/clusters).
 
 To use it, select Solana Devnet in the local copilot and choose the public Solana
 address to inspect, then ask for balances or missing setup steps. Solana mode
