@@ -67,7 +67,12 @@ underlying tMGAS retains owner-controlled minting. Exact allowance, wrap and
 unwrap actions require separate human wallet review and native Arc test-USDC
 gas. Arc assets remain separate from Base-funded service credits.
 
-Eight isolated EVM tests and thirteen controller tests passed internally. This
+Eight isolated EVM tests and twenty-one controller tests passed internally (29
+focused checks). A bounded deployment-recovery review keeps the original sender,
+chain, creation data, zero value and nonce; it retains up to three candidates.
+Only an explicit human review can open MetaMask. A canonical receipt from any
+matching candidate resolves that one deployment. Internal review identifiers are
+not transaction hashes. This
 is not an independent audit. **Live deployment verification is pending.** No
 verified deployment, wtMGAS pool, market-trade proof, mainnet release, USDC peg or
 cash-redemption promise is claimed. No new MCP wrapping tools are claimed. Public status is documented at

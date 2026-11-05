@@ -44,8 +44,15 @@ allowance, wrapping and unwrapping as separate human-reviewed MetaMask actions.
 Native Arc test USDC pays their network gas. Balances, backing, wrapped supply
 and surplus are checked at a matching block checkpoint.
 
-Internal validation passed **eight isolated EVM tests and thirteen controller
-tests**. This is not an independent audit. **Live deployment verification is
+Interrupted deployments retain their original sender, chain, creation data,
+zero value and nonce. An explicit same-nonce recovery review can retain up to
+three candidate plans, with a fresh network-fee review and human MetaMask
+approval. The controller never advances to a new nonce automatically, and only
+a matching canonical receipt resolves the saved action. Internal review IDs
+are not MetaMask transaction hashes.
+
+Internal validation passed **eight isolated EVM tests and twenty-one controller
+tests (29 focused checks)**. This is not an independent audit. **Live deployment verification is
 pending**; no verified deployment, wtMGAS liquidity pool, market trade or mainnet
 release is claimed.
 The 1:1 token claim does not establish a USDC price, cash redemption or resale
