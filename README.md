@@ -61,3 +61,7 @@ No platform license is granted by this website repository. Website content and M
 ## Hosting
 
 The static directory is `dist/`. `.openai/hosting.json` binds the managed Site identity. The public website and this website-only repository were explicitly authorised by the project owner. No grant application or external message is sent by deployment.
+
+## Leveraged ETH/SOL research — November 5, 2026
+
+The public trading-data page now links the complete $20 perpetuals study: ten fixed hypotheses, notional fees, hourly funding, minimum orders and conservative isolated liquidation. Neither asset passed the development-and-validation screen. The 156-row comparison CSV and full selected-case evidence ZIP preserve failures, cost stress and mixed-venue data limitations. Private platform source is excluded.

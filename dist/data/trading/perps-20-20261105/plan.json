@@ -1,0 +1,122 @@
+{
+  "frozen_utc": "2026-11-05T20:37:58.907916+00:00",
+  "protocol_version": "matex-perps-20-20261105-v1",
+  "assets": {
+    "ETH": {
+      "sz_decimals": 4,
+      "max_leverage": 25.0,
+      "maintenance_margin_rate": 0.02
+    },
+    "SOL": {
+      "sz_decimals": 2,
+      "max_leverage": 20.0,
+      "maintenance_margin_rate": 0.025
+    }
+  },
+  "candidate_descriptions": {
+    "trend_breakout": "15m close outside prior 20 highs/lows, EMA50/200 direction; 1.5 ATR14 stop, 3 ATR14 target, maximum 32 bars.",
+    "range_reversion": "15m Bollinger20/2SD re-entry with ADX14 <20; 1.5 ATR14 stop, frozen SMA20 target exceeding stop distance plus signal-level costs, maximum 16 bars.",
+    "opening_range": "First close outside complete 00:00\u201300:59 UTC range; opposite edge stop, 2R target, one signal/day, maximum 92 bars.",
+    "hourly_bb_reentry": "Completed-hour Bollinger20/2SD re-entry; 1.5 hourly ATR14 stop, frozen hourly SMA20 target exceeding 0.5R plus signal-level costs, maximum 16 bars.",
+    "previous_day_failure": "15m sweep and rejection of one previous complete UTC day edge; signal extreme plus 0.25 ATR14 stop, previous-day midpoint target exceeding 1R plus signal-level costs, maximum 32 bars.",
+    "opening_range_fade": "Fade first close outside complete 00:00\u201300:59 UTC range; 2 box-width stop, opposite edge target exceeding signal-level costs, one signal/day, maximum 32 bars.",
+    "hourly_trend_breakout": "Completed-hour close outside prior 20 hourly highs/lows with EMA50/200 direction; 1.5 hourly ATR14 stop, 3 ATR14 target, maximum 32 bars.",
+    "ema_pullback": "Completed-hour EMA20/50/200 ordered trend and close recrosses EMA20 after pullback, ADX14 >=20; 2 hourly ATR14 stop, 4 ATR14 target, maximum 24 bars.",
+    "atr_channel": "Completed-hour close outside prior 20 hourly highs/lows, EMA200 direction and ADX14 >=25; 2 hourly ATR14 stop, 4 ATR14 target, maximum 32 bars.",
+    "rsi_trend": "Completed-hour RSI14 crosses 45 upward/55 downward with EMA50/200 trend; 1.5 hourly ATR14 stop, 3 ATR14 target, maximum 24 bars."
+  },
+  "windows": {
+    "development": [
+      "2024-02-01",
+      "2025-07-01"
+    ],
+    "validation": [
+      "2025-07-01",
+      "2026-01-01"
+    ],
+    "reused_test": [
+      "2026-01-01",
+      "2026-10-01"
+    ],
+    "reused_recent": [
+      "2026-10-01",
+      "2026-10-21"
+    ],
+    "later_check": [
+      "2026-10-21",
+      "2026-11-05"
+    ]
+  },
+  "baseline_leverage": 5,
+  "selected_leverage_levels": [
+    2,
+    5,
+    10,
+    20
+  ],
+  "base_config": {
+    "starting_cash": 20.0,
+    "leverage": 5.0,
+    "fee_rate": 0.00045,
+    "slippage_bps": 2.0,
+    "risk_fraction": 0.05,
+    "margin_fraction": 0.75,
+    "max_notional": 150.0,
+    "min_notional": 10.0,
+    "sz_decimals": 4,
+    "maintenance_margin_rate": 0.02,
+    "max_leverage": 25.0,
+    "fallback_hourly_funding": 1.25e-05,
+    "stress_hourly_funding": null,
+    "daily_loss_fraction": 0.15,
+    "equity_floor": 5.0,
+    "max_entries_per_day": 2
+  },
+  "stress": {
+    "slippage_bps": 8,
+    "stress_hourly_funding": 0.0001,
+    "windows": [
+      "reused_test",
+      "later_check"
+    ]
+  },
+  "selection": {
+    "eligible": "At 5x: at least 30 completed validation trades, positive development net profit and positive validation net profit. Choose highest validation net profit; ties favor trade count then declared candidate order.",
+    "failed_fallback": "If none is eligible, choose highest validation net profit among candidates with at least 30 validation trades, explicitly labelled failed_screen_fallback.",
+    "insufficient_sample": "If none has 30 validation trades, display highest validation net profit with any validation trades as insufficient_sample; if none trades, select nothing. Neither fallback is an eligible strategy.",
+    "forbidden": "No selection or retuning using reused_test, reused_recent, later_check, higher leverage or cost stress."
+  },
+  "timing": "Completed 15m/hourly signal, next 15m open entry before 20:00 UTC, maximum two entries/day, complete UTC opening box, flat by day-end; hourly hypotheses require 220 prior complete hours.",
+  "accounting": "Each asset/window/leverage/stress starts afresh with $20 and ends flat. This is neither a continuous account nor a shared two-asset $20 portfolio. Gross P&L minus fees and signed funding must reconcile to final cash.",
+  "funding": "Observed Hyperliquid hourly rates settle at hourly OPEN for carried positions. Binance mark-open proxies unavailable oracle prices. Missing rate is adverse 0.00125% per hour for either direction. Stress is always adverse 0.01% per hour.",
+  "liquidation": "Small-notional current mainnet maintenance: ETH 2%, SOL 2.5%. Isolated liquidation conservatively loses remaining isolated collateral including accumulated funding credits, while unrelated free cash remains. Actual matching/backstop not reconstructed.",
+  "evidence": "Frozen before this experiment computes any returns. Earlier dates are reused. Later_check has 15 days new to this study, not globally untouched dates or prospective evidence.",
+  "limitations": [
+    "Research only. No wallet, order, account-permission or live leverage changes.",
+    "Binance USD-M trade and mark candles proxy Hyperliquid execution and liquidation. This is not a single-venue reconstruction.",
+    "Observed Hyperliquid funding uses Binance mark-open as an oracle-price proxy; exact historical oracle prices are unavailable.",
+    "Hourly funding is settled at the open for carried positions, before new entries. Scheduled preceding-close exits precede settlement; exact same-time matching cannot be reconstructed.",
+    "Missing funding uses an explicit adverse 0.00125% per hour for either direction; stress uses adverse 0.01% per hour.",
+    "Liquidation conservatively loses remaining isolated collateral. Actual order-book liquidation may retain some margin; no liquidation clearance fee is added.",
+    "Known open gap exits precede later mark extremes. When intrabar order is unknown, liquidation precedes stops, and stops precede targets.",
+    "Current mainnet quantity precision and small-notional maintenance tiers are held constant historically. Testnet and historical tiers can differ.",
+    "Drawdown is marked at 15-minute closes and modeled exits, not tick-by-tick. Failed stops, latency and market depth are unavailable.",
+    "Each run starts with fresh collateral and ends flat. Separate ETH/SOL runs are not a simultaneous shared-$20 portfolio.",
+    "The $20 is assumed already deposited collateral. Deposit, withdrawal, bridge, network and tax costs are excluded.",
+    "Ten hypotheses and multiple assets/leverage levels create selection bias. Previously examined dates are reused research; historical profit is not evidence of future profit.",
+    "Seven hypotheses transfer from previously inspected research; three additional hourly definitions are fixed before this study's returns. All ten are disclosed.",
+    "Development, validation, reused_test and reused_recent calendar data were already used in earlier research. Selection is adaptive research, not untouched confirmation.",
+    "The 15-day later_check is new to this study, but its calendar dates already exist and are not claimed globally pristine or prospective.",
+    "The 5x candidate is selected independently per asset from development eligibility and validation ranking only. Later returns, leverage sensitivity and stress never change the selected candidate.",
+    "All ten candidates are published at baseline 5x in every window, including failures. Only the validation-selected candidate receives detailed leverage/stress runs.",
+    "Positive results after modeled costs remain historical simulation. Small samples, multiple comparisons, proxy prices and parameter selection prevent a future-profit claim.",
+    "Cost stress deliberately changes sizing through the same risk budget as well as fill/funding costs. It is a complete rerun, not a fee-only subtraction from baseline trades.",
+    "Signal reward gates use fixed 0.045% fee plus 2bps slippage per side at signal close. Entry gaps may change reward/risk, and the simulator rejects entries beyond stop or target."
+  ],
+  "sources": {
+    "price_archives": "https://github.com/binance/binance-public-data",
+    "fees": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+    "funding": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+    "liquidations": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations"
+  }
+}

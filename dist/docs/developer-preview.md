@@ -242,16 +242,16 @@ Read-only checks and wallet connection do not establish that proof.
 
 ## Trading research and paper recovery
 
-The local MateX trading dashboard and its separate nine-tool research MCP now
+The local MateX trading dashboard and its separate eleven-tool research MCP now
 accept explicit BTC, ETH or SOL selection, starting capital and per-fill
 slippage. Backtests, rolling walk-forward tests and execution comparisons use
 the source-specific symbol and a market-specific candle cache. Sample and
 generated data retain simulation labels. New journal records and exported
 reports retain effective market, account and cost assumptions.
 
-The 20-unit capital preset affects actual broker sizing. The model remains
-fractional spot simulation at 1×; venue minimums, perpetual funding and
-liquidation are not modelled. The buy-and-hold benchmark is labelled gross.
+The 20-unit capital preset affects actual broker sizing. The original model remains
+fractional spot simulation at 1×. The separate perpetual simulator described
+below includes minimum orders, funding and conservative isolated liquidation. The buy-and-hold benchmark is labelled gross.
 Three months of real four-hour ETH and SOL candles exercised the running API
 with 20-unit simulation accounts, walk-forward validation and cost comparisons.
 This is internal functional evidence, not profitable-strategy or adoption proof.
@@ -264,7 +264,7 @@ establish cadence from that interval; multi-bar catch-up requires earlier or
 saved cadence evidence. Closed-candle risk checks do not model intrabar stops.
 No actual exchange orders are replayed by this paper-account recovery.
 
-The nine-tool MateX research connector is separate from the 15-tool MATEx GAS
+The eleven-tool MateX research connector is separate from the 15-tool MATEx GAS
 preview and four-tool managed Arc report connector. Their payment scopes and
 current setup requirements remain as documented above.
 
@@ -289,3 +289,7 @@ Project brief: /project.html
 Developer status: /developers.html
 Historical research: /trading-data.html
 Website source: https://github.com/The11-11/matex-gas-site
+
+## Leveraged perpetual research
+
+The separate MateX research MCP now exposes eleven tools, including perpetual metadata and bounded ETH/SOL backtests. The GAS preview remains separate. The local dedicated research lab includes $20 capital, fees on notional, funding and isolated liquidation; it cannot place trades. Ten fixed candidates were evaluated with validation-only ranking, followed by later-period and leverage/cost stress. Neither asset passed the development-and-validation screen. Public evidence is at `/trading-data.html#leveraged-perps`; full price/oracle proxies, REST repairs, margin and close-marked drawdown limits remain attached.
