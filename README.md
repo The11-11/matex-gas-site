@@ -15,6 +15,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 ## Scope
 
 - Responsive project landing page and printable project brief.
+- Developer feature status, three local agent skills, the 15-tool MCP preview and downloadable developer notes.
 - Narrated 100-second product demo with English captions, a public transcript link and the verified internal Arc testnet conversion receipt.
 - Clearly labelled interactive illustration of Arc USDC and MGAS shared-credit payment flows.
 - Existing MATEx double-M identity with charcoal, green, cream and warm metallic accents.
@@ -22,6 +23,12 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 - No wallet integration, payments, connected accounts, API credentials or data collection on the site.
 
 Current implementations and proposed milestones are distinguished. Arc user-signed settlement, public hosted execution and mainnet readiness are not claimed. The connector’s npm and MCP Registry publication is still pending.
+
+As features change, update `dist/developers.html`, `dist/docs/developer-preview.md`
+and the home/project status summaries after verification. Keep completed public
+reads, wallet setup and transaction execution as separate status observations.
+Private operator settings and machine-specific connection details stay outside
+this website repository.
 
 ## License boundary
 
