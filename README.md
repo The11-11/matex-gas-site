@@ -54,6 +54,26 @@ implemented. There is no enabled bridge, cash-out or MGAS redemption flow.
 See `/developers.html#usd-funding` and `dist/docs/developer-preview.md` for the
 official integration sources and validation boundaries.
 
+## Wrapped MGAS preparation — November 6, 2026
+
+The private local workspace now contains an Arc testnet wtMGAS wrapper and
+wallet-review page. One deposited tMGAS backs one wtMGAS, both with six decimals
+and zero initial wrapped supply. Standard transfers move the holder's right to
+burn wtMGAS for the same amount of underlying tMGAS. The underlying token is
+pinned to `0x28d0369964820248fc3f34c708d6d1d7288dbbbb` on chain 5042002.
+
+There is no wrapper administrator mint, upgrade or recovery withdrawal; the
+underlying tMGAS retains owner-controlled minting. Exact allowance, wrap and
+unwrap actions require separate human wallet review and native Arc test-USDC
+gas. Arc assets remain separate from Base-funded service credits.
+
+Eight isolated EVM tests and thirteen controller tests passed internally. This
+is not an independent audit. **Live deployment verification is pending.** No
+verified deployment, wtMGAS pool, market-trade proof, mainnet release, USDC peg or
+cash-redemption promise is claimed. No new MCP wrapping tools are claimed. Public status is documented at
+`/developers.html#wrapped-mgas` and in the downloadable developer notes; private
+implementation code is excluded from this website repository.
+
 ## License boundary
 
 No platform license is granted by this website repository. Website content and MATEx branding remain reserved unless separately licensed. The MIT license selected for the separate `matex-gas-mcp` connector does not apply to this repository or the private platform.

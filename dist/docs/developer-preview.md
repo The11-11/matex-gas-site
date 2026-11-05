@@ -1,6 +1,6 @@
 # MATEx GAS developer preview
 
-Status snapshot: 5 November 2026.
+Status snapshot: 6 November 2026.
 
 MATEx GAS is the gas and payment layer being developed alongside MateX trading,
 research and agent wallets. Its goal is one shared funding account while funded
@@ -24,6 +24,35 @@ later, copy its generated MCP configuration from the Agents section into their
 own MCP-compatible client, list the actual tools and load the relevant skill.
 The command and script arguments are separate client fields. A workspace web
 page is not a stdio MCP endpoint.
+
+## Wrapped tMGAS — live deployment verification pending
+
+The local Arc testnet wtMGAS implementation wraps the existing tMGAS token at
+1:1 in token units. Both tokens have six decimals. The wrapper begins with zero
+supply and pins its underlying asset to
+`0x28d0369964820248fc3f34c708d6d1d7288dbbbb` on chain 5042002.
+
+A deposit locks tMGAS and mints the same amount of wtMGAS. Standard transfers
+move the redemption claim: the current wtMGAS holder can burn it to receive the
+same amount of underlying tMGAS. Direct underlying donations create surplus
+backing without issuing wrapped claims. The wrapper exposes no administrator
+mint, upgrade or recovery withdrawal; the existing underlying tMGAS token
+retains its owner-controlled minting.
+
+The local review page prepares a zero-supply deployment, an exact underlying
+allowance, wrapping and unwrapping as separate human-reviewed MetaMask actions.
+Native Arc test USDC pays their network gas. Balances, backing, wrapped supply
+and surplus are checked at a matching block checkpoint.
+
+Internal validation passed **eight isolated EVM tests and thirteen controller
+tests**. This is not an independent audit. **Live deployment verification is
+pending**; no verified deployment, wtMGAS liquidity pool, market trade or mainnet
+release is claimed.
+The 1:1 token claim does not establish a USDC price, cash redemption or resale
+guarantee. Arc tMGAS and wtMGAS remain separate from Base-funded service credits.
+This addition enables no bridge, shared gas dispatch or new MCP wrapping tools.
+
+Public status: `/developers.html#wrapped-mgas`.
 
 ## Three project-owned agent skills
 
