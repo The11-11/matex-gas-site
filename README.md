@@ -69,3 +69,7 @@ The public trading-data page now links the complete $20 perpetuals study: ten fi
 ## Perpetual research round two
 
 Ten additional fixed strategies, including VWAP and multi-day momentum, bring the local catalogue to twenty. The Python research MCP remains eleven tools. Overnight funding reserves and uninterrupted $20 accounts complement fresh-window comparisons. All 240 comparison rows, fixed rules and failed cases are public at `/trading-data.html#perps-round2`. No strategy was profitable in all five reused periods under baseline or stress. Original study files are retained. Private platform source and wallet capabilities are excluded.
+
+## Focused native SOLUSDC momentum
+
+Eight cases add a native USDC quote/margin/settlement source to the local lab (28 strategy IDs; eleven research MCP tools). Actual funding dates, tick and minimum orders stay separate from legacy proxies. The funding-filter baseline continuous account has five positive marked period changes, but fresh-start consistency and higher-cost stress fail; it is not a qualified live strategy. All 96 rows, hashes, native market inputs and review exports are public at `/trading-data.html#sol-usdc-momentum`. USDC denomination does not claim a new Circle API integration or partnership.

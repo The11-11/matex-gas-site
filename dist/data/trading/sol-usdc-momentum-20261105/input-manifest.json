@@ -1,0 +1,1133 @@
+{
+  "symbol": "SOLUSDC",
+  "market": "SOL",
+  "quote_asset": "USDC",
+  "margin_asset": "USDC",
+  "settlement_asset": "USDC",
+  "venue_name": "Binance USD-M SOLUSDC perpetual",
+  "first_open_utc": "2024-01-05T00:00:00+00:00",
+  "end_exclusive_utc": "2026-11-05T00:00:00+00:00",
+  "bars": 99360,
+  "interval_seconds": 900,
+  "funding_observations": 3105,
+  "missing_funding_hours": [],
+  "funding_cadence": "Published per-settlement intervals; REST tail uses independently verified current interval. Non-settlement hours incur no funding.",
+  "funding_price": "Archive rates have no settlement-mark field. Twelve REST observations include optional exact mark prices; the current simulation uses same-venue 15-minute mark-open for ALL funding payments.",
+  "price_source": "Native Binance SOLUSDC perpetual trade candles",
+  "mark_source": "Native Binance SOLUSDC perpetual mark candles",
+  "funding_source": "Native Binance SOLUSDC funding archives and official REST",
+  "cross_venue_proxy": false,
+  "mark_fallback_rows": 0,
+  "generated_utc": "2026-11-05T21:18:42.617244+00:00",
+  "hashes": {
+    "candles.csv": "a2b81c415630c804a292bc557ee68db6744493ee3b8522362f6f8391b9fef8ed",
+    "mark_prices.csv": "54354ed4c98448a2c523284ab0da174cde157965c465d29930f22d7a8773b136",
+    "funding.csv": "d8a94df9c7c98cbabed2e641fd5474e12bf78262b72a70b145e62f6cb3e3b1c6",
+    "venue_metadata.json": "007b6db766dc26ed083f8d5dfbe00045c28e4f5d3eb560859c4baa016c21ff18"
+  },
+  "sources": {
+    "klines": [
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-01.zip.CHECKSUM",
+        "sha256": "64948411c1114488eaf21e9e695409165a0ded5c2245304528691e954f4f05d5",
+        "csv_sha256": "cee8e1238067c15a5f97bb8bed54c68b8bff581c7f33ad4483d502101ba0fe8c",
+        "checksum_verified": true,
+        "rows": 2637,
+        "first": 1704372300,
+        "last": 1706744700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-02.zip.CHECKSUM",
+        "sha256": "238519a6b7e0ec546942afd900c0d62fb5f996604fe24a4912b709af8c8be1d3",
+        "csv_sha256": "f6e630d300e92a5d42baed1f2174d964bf5da486beb5717f0e378985514c0499",
+        "checksum_verified": true,
+        "rows": 2784,
+        "first": 1706745600,
+        "last": 1709250300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-03.zip.CHECKSUM",
+        "sha256": "bd13f3a207d2a397f8fd3be26fe3ccba6fc83f80c2fa5d09df63b8097832b9bd",
+        "csv_sha256": "c24527028e02befc1a9f51f874f1fa86e83f468165ab6cbed7e1f36fd491ca89",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1709251200,
+        "last": 1711928700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-04.zip.CHECKSUM",
+        "sha256": "1978769da5bc81e16f786ad723d7546f8562a8d7daa8b9e83763a1aec561fb90",
+        "csv_sha256": "de5b0d79a48aab33493324d948325b5e6e57e52096688db0f2864114ba25172b",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1711929600,
+        "last": 1714520700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-05.zip.CHECKSUM",
+        "sha256": "23cec126cfe437e3d8963bbc5a4994982804758df88932d863b51a1672312e33",
+        "csv_sha256": "5f9de23d552ad17fe2001c3fbd590cc865e0c655e4a66507526ecb03cce54a69",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1714521600,
+        "last": 1717199100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-06.zip.CHECKSUM",
+        "sha256": "a57cb291303dc929e127d4e4dbb525ed40766fa65db05cf5751e53f22106b2f9",
+        "csv_sha256": "387f0d9242611051e228ecbec531e0d08e018c89eaa4f852182dea876b9ea36a",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1717200000,
+        "last": 1719791100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-07.zip.CHECKSUM",
+        "sha256": "628ad64d4c5d8f98165a893b887e1b74395a47d9bf292935e6846424ab090bd9",
+        "csv_sha256": "e1d01dff85c4dd7e951b5dff83d2d979262e9ccb7d27133f32ddd7aebfcd62d5",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1719792000,
+        "last": 1722469500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-08.zip.CHECKSUM",
+        "sha256": "a6738b78a94f91b98972b7eb263ba5f6651f4246c26ad346f20cb6c30f39ff62",
+        "csv_sha256": "a3cb54f8b3ea133ac94ff0e580a26996d91f3d4e575ce5d393bcbe584424b2e4",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1722470400,
+        "last": 1725147900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-09.zip.CHECKSUM",
+        "sha256": "68a01a13a63e99ae4e591811b35a291bf75d405d2fca33a2791804e0d57e2023",
+        "csv_sha256": "7a9777e16057708f4344ab9febbe36b15f0dcadc7c9b4a9510b3b58a345a450f",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1725148800,
+        "last": 1727739900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-10.zip.CHECKSUM",
+        "sha256": "f1d54947ec48fc843a5d784cc4f354f398a1dac3d57053be2fbb66bc8c4f5763",
+        "csv_sha256": "b30626283d45f8edd9b4433ad38fea369966afee2bdfeef5f01c84eeb6a4337f",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1727740800,
+        "last": 1730418300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-11.zip.CHECKSUM",
+        "sha256": "32e217b17e0e98f237d83026f4bce02caea561951905ae7d80f1fa01e5e96e4b",
+        "csv_sha256": "10b9c0ac7b89fe6787765d19425f397b5b410a0bfe5bc43655976183c7999032",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1730419200,
+        "last": 1733010300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2024-12.zip.CHECKSUM",
+        "sha256": "ad62743ab9e7c310fdfc4464cec4fa90eb9190a1a9f090151bcc1b20317a068a",
+        "csv_sha256": "b0c62af25ccbe55863bd61ca0101e6a57c0ef972d4af66d1a98291445172ffe1",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1733011200,
+        "last": 1735688700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-01.zip.CHECKSUM",
+        "sha256": "2ac2cb162575888c2d12db7b139e6c0189224c03ef452b78cae10bbfa5cb1df2",
+        "csv_sha256": "13ecebb8809068f32a105bea935462c400e65893f4e4c3dd39b20358e2f06fbe",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1735689600,
+        "last": 1738367100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-02.zip.CHECKSUM",
+        "sha256": "7dbf0bb3643b6396f11f3e7b39b4e531dea6e91da7d21ae24c1b0be14b1fd9ab",
+        "csv_sha256": "3050ec22fa75e54c85e52935cdac5f02c44bcc1bbc67d77c94d597e2cc299db5",
+        "checksum_verified": true,
+        "rows": 2688,
+        "first": 1738368000,
+        "last": 1740786300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-03.zip.CHECKSUM",
+        "sha256": "0dc6a32d268b1428daf83368f9b7e0439e7cb05109baae77974500b17a4f8c4f",
+        "csv_sha256": "b4351fa9888e1ef20e9afd582ca1c7a9eee698714c3ff586060244ab8e47700b",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1740787200,
+        "last": 1743464700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-04.zip.CHECKSUM",
+        "sha256": "b595fc8427e037512743d54bcee2ac199bc6a29296f85f8025e53f2d0bc31472",
+        "csv_sha256": "a75e9ee6b49fef842d8fa88fd664767cb7445870eddbaf65b44747f1f4d31089",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1743465600,
+        "last": 1746056700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-05.zip.CHECKSUM",
+        "sha256": "88a466e302468e2c4e05f2767e120e72b2cb8f4df0c2db131bb236c333b94ca8",
+        "csv_sha256": "f13cbc453cad700fc25abc2565dba18fa6a5d2aa1b136cb9cca2d53be0bf50a7",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1746057600,
+        "last": 1748735100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-06.zip.CHECKSUM",
+        "sha256": "6b323ad1840256570ca0efebf123b38161479f7f26118f68daafcd8ca9b9cf8d",
+        "csv_sha256": "276f66fff3cb59cc64e47c8623964ebd072316843977d11964b51b15e5349757",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1748736000,
+        "last": 1751327100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-07.zip.CHECKSUM",
+        "sha256": "57cb51bcccca837ce0b4d046ce6bffaa47d5efbe221d4ebe64de5802faafbaa5",
+        "csv_sha256": "3fe70a1271f8a20960f5e84e6ba79edc28a6198934a11e4c9f1139a150fb20e3",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1751328000,
+        "last": 1754005500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-08.zip.CHECKSUM",
+        "sha256": "a3427c769ee96485c81c8ab09262f95561599a835727d92e5a6d93c69f749e90",
+        "csv_sha256": "e2862ef5ce8dab1976afef159f71a5e28d30d2d023fd851317c13ae1cffe2aee",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1754006400,
+        "last": 1756683900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-09.zip.CHECKSUM",
+        "sha256": "978e27bc536675302ba856236f01980ff99c3dbd5cb749988466e34b2bc70153",
+        "csv_sha256": "c70f0d3e1fcc9b5d5b7e9560d17774ad185815182f1904debc4390d94ead2c71",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1756684800,
+        "last": 1759275900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-10.zip.CHECKSUM",
+        "sha256": "ecc87bb4a05b7b6b9021828f71ffe6eeb6f3f9c253f766217178742e34f4c86b",
+        "csv_sha256": "d7c5a92f48a3466bd31d12391328b889282c17cab38f788d6268124e68910788",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1759276800,
+        "last": 1761954300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-11.zip.CHECKSUM",
+        "sha256": "9b41d4dbee709448f5be9a650c703bfaa925c1f5c81eca3a973163cabd7ffa26",
+        "csv_sha256": "56c853e642eb85fc1e2fd1c5765d852550aff313ff798e656c7d32e4a2f10be7",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1761955200,
+        "last": 1764546300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2025-12.zip.CHECKSUM",
+        "sha256": "1c63b6289ba41d5105faa0481599c2f01e313651040f61309cb79b6a230b59e9",
+        "csv_sha256": "e715cf0f7680853fdeed232eff91563a99fd779963ce291a87645c878409de13",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1764547200,
+        "last": 1767224700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-01.zip.CHECKSUM",
+        "sha256": "a8c5c8cf651cbdecaade046b31b4ebd2ea97b86a9485064a5a9596bd3e7665f1",
+        "csv_sha256": "7e3ae80f74c20a20e3bdf2edeb4753a4d6a411838b0b7275d54451133ae3ec25",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1767225600,
+        "last": 1769903100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-02.zip.CHECKSUM",
+        "sha256": "0e731daaac77ddc41b336922514d56a7d46c66f321a42932ae2079a04d8f8d57",
+        "csv_sha256": "cb71c73b4527e689f0f625362633031227e307320a6082cb7f9dcd14129001ad",
+        "checksum_verified": true,
+        "rows": 2688,
+        "first": 1769904000,
+        "last": 1772322300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-03.zip.CHECKSUM",
+        "sha256": "06110bb8715e21e48221692587e638c56ed4fb199debdafa856fea0dbe67cf50",
+        "csv_sha256": "5ea8e65f37ca3583619d9f6293392fa0b84a24c550ddfeb011c8af25a25a52f1",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1772323200,
+        "last": 1775000700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-04.zip.CHECKSUM",
+        "sha256": "e22f97fe23a0c55411a92d7e17e0e71a44061f3c35a29b1336d5b08f4bd4bbd0",
+        "csv_sha256": "2e72ad487368e6eff9ced4661ed43c77f8f2ce5209b70bd88f270efd8a35e372",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1775001600,
+        "last": 1777592700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-05.zip.CHECKSUM",
+        "sha256": "08f87f38a2ef039b45f3dd64d96314d56494c5583956ced85a1416f415394ba9",
+        "csv_sha256": "7364682d0fd3b3cfbd504fe478d810c829fc02db341889da8b28e0f1dca1aced",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1777593600,
+        "last": 1780271100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-06.zip.CHECKSUM",
+        "sha256": "f337067d36d5647963f34a9aa6f9809c84948c54fe5a96e3818d01e6d6e793c2",
+        "csv_sha256": "24636e6d577a5b8d384552bd8d57a77f40846ad8891ad024948e56bec8bfce35",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1780272000,
+        "last": 1782863100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-07.zip.CHECKSUM",
+        "sha256": "9372b052aa6d61d17b6817fbbe234a7572e5419a6933dce427c6dc332482096b",
+        "csv_sha256": "e1d170a114391c1579d0a4581e2dd8750ed9c0710cc3636f2df8806cf95ea844",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1782864000,
+        "last": 1785541500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-08.zip.CHECKSUM",
+        "sha256": "2abea9e36b87586c48b54410396accd16a9202ecef0907343d6470415c3cc06d",
+        "csv_sha256": "55c46b8ea12dfe051bef8e3a7df34ff28e6b7fbf522d0c073d65bbdffa5de715",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1785542400,
+        "last": 1788219900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-09.zip.CHECKSUM",
+        "sha256": "9a051ffaf9493f3f35de657b5a44385305358251a3e561fc9640b7a6a4a933ee",
+        "csv_sha256": "b6e0c2d078da8af6d24ade8b62c830576a55e7449ed074fcaa2974bff84e56a4",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1788220800,
+        "last": 1790811900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDC/15m/SOLUSDC-15m-2026-10.zip.CHECKSUM",
+        "sha256": "224f4c012d37a773d07ad7ff3e54ea4aae025a5bfc9e23cda2991c9cf21e372a",
+        "csv_sha256": "62001734f50f312cfe46e91f29946ad56bbcfe0d4ebef35e9187a7fa68b3d362",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1790812800,
+        "last": 1793490300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-01.zip.CHECKSUM",
+        "sha256": "91c8bb887b014a72ff591d4e08c51f8a8cdd1cea2a4be48475156734e638c98e",
+        "csv_sha256": "e3f995aeded4ba45628505f10426f192ed631a58ccf1a68f61deefd03952e650",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793491200,
+        "last": 1793576700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-02.zip.CHECKSUM",
+        "sha256": "2bf84b11c56c10402c68b65c2e8234303fccb5806bd321f72a5258797dce64ec",
+        "csv_sha256": "92787a96046a524131702b7945a57cd8fd31542efbcf804bf16545cdc241d0a4",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793577600,
+        "last": 1793663100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-03.zip.CHECKSUM",
+        "sha256": "9792db78714eb21e9eaf210ad33403dd6ee7bb0202a7c85e110b491971b6ae76",
+        "csv_sha256": "094c937c23e565d0184741ffd8f7d50be87458c66121dbddcc7ff33f5ec1ab77",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793664000,
+        "last": 1793749500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDC/15m/SOLUSDC-15m-2026-11-04.zip.CHECKSUM",
+        "sha256": "6729c8a7086961e3254fc768f3985ebc923654a800c9eded135197eb1054c9d6",
+        "csv_sha256": "b7a40f9c9cb26950826a96b728f486f92117c21e948f4550f3e3b7eaf8d75806",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793750400,
+        "last": 1793835900
+      }
+    ],
+    "markPriceKlines": [
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-01.zip.CHECKSUM",
+        "sha256": "51b67346677d142a4c0d073e8180b8d9337e1e26f3013316be018c572fc1014d",
+        "csv_sha256": "7d6fc0c307db9588f03d02abb8b3f66a488576d1bcbcab968b820f092984fcca",
+        "checksum_verified": true,
+        "rows": 2784,
+        "first": 1704240000,
+        "last": 1706744700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-02.zip.CHECKSUM",
+        "sha256": "82876cdcd52a30b0514f575873ae836fad5da75468518f3e57726324c4aafb8c",
+        "csv_sha256": "528a9c6991b743f34011d3979d8de2f2026c82ffa12791283e171abc4c68d295",
+        "checksum_verified": true,
+        "rows": 2784,
+        "first": 1706745600,
+        "last": 1709250300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-03.zip.CHECKSUM",
+        "sha256": "6587838c07dd6eda92e218d62249efe6966177e6cae30c0b0a2d8aea908bc9a9",
+        "csv_sha256": "ac235a1ac94a05dad7bc803ad87dd622fb0c0b2d366e1e2c65914e57b25bf111",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1709251200,
+        "last": 1711928700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-04.zip.CHECKSUM",
+        "sha256": "5046927577be6ad9fc4e79f09280a50f3145ccc337deff9d3f381b818d62a175",
+        "csv_sha256": "3278b16a36b487ea90a3358d5d7b1f71bbdd0569026c0a44771f2cd44845764c",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1711929600,
+        "last": 1714520700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-05.zip.CHECKSUM",
+        "sha256": "6f5e0f57ef81926b939fdd39793546f7c37526c9f02ceb7e9604f7a3d889cc5f",
+        "csv_sha256": "1531e7ee546039aeb03bc3f18c92d3085477d922544e3a89cd232dc97eaa22bc",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1714521600,
+        "last": 1717199100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-06.zip.CHECKSUM",
+        "sha256": "4a36513e429d9447f0d15f484b3c8fa03b54bfc843d5d48b8cef81795a244ada",
+        "csv_sha256": "216ce15c7c4efd2f2415435694afde9d9ec76bf1f828583399de928e52ab5adf",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1717200000,
+        "last": 1719791100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-07.zip.CHECKSUM",
+        "sha256": "ea243e9ea110d6c1e6465d4e50b80dc85354e28ab0a1b46a57a6300fb6830e99",
+        "csv_sha256": "beedf3ef6376ca73abe0ced168bb2fb8252778e883d45416ba7255a32fbd1ec8",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1719792000,
+        "last": 1722469500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-08.zip.CHECKSUM",
+        "sha256": "deaa7b765abea7ffe164e14be9898187b27bcbd450f0a3fa5b9d22a4034e404e",
+        "csv_sha256": "b9873cc28e75841aae4861129a210f12b74bd72f8b53c54ac95a775949138659",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1722470400,
+        "last": 1725147900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-09.zip.CHECKSUM",
+        "sha256": "d30e46e3a1a68a5f4fe39eb5e7e0ff4a9213bcb4d72de3e3c8115d04105e0eff",
+        "csv_sha256": "4c52de389611c4c4ec4e402b1147a823a782b0f9e59c8d0a418787836dfd231e",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1725148800,
+        "last": 1727739900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-10.zip.CHECKSUM",
+        "sha256": "f7fcfee7bc8ffb4e9193d34819a3271ae6be271534749c693dc5ff126bbedeb1",
+        "csv_sha256": "222490573c2512ebd0a64cbb04d49a04661937ed1cbd3b746893c880f7eecbfa",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1727740800,
+        "last": 1730418300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-11.zip.CHECKSUM",
+        "sha256": "e5d516d68d72c076cf85fdca081aa0d0046e35651e407d876f6966bec6e40df7",
+        "csv_sha256": "f9dcfe441f96a73771de09ad7a7558d0b9c767ba9ebd30c8d900fcf4fbfa38e6",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1730419200,
+        "last": 1733010300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2024-12.zip.CHECKSUM",
+        "sha256": "8203871d72e16d269609dbc44e9e0b628ffe6f7a4ea9139be1ee78b951c1a8be",
+        "csv_sha256": "cbbb372da515569cbf55ffa445356bbe9f4421d4250d7647f609179784988ce6",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1733011200,
+        "last": 1735688700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-01.zip.CHECKSUM",
+        "sha256": "8710c2294685bcceabc7f93a4e5b0e68a271eb98d8a10d86d7052a64c3a8ec5f",
+        "csv_sha256": "9aa49c7ecf79bd2bbd11c3746cfa9546df072c2e07a23203af982d6e32f136e4",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1735689600,
+        "last": 1738367100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-02.zip.CHECKSUM",
+        "sha256": "0f24b82cc594f77a91072f01b354283b997555b52c2e1fbdacb39cb706a794b6",
+        "csv_sha256": "d2b04f53672f3e8bb6f11c17d366bb9f3a308fcd7063eebea9c20f6bc06166b7",
+        "checksum_verified": true,
+        "rows": 2688,
+        "first": 1738368000,
+        "last": 1740786300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-03.zip.CHECKSUM",
+        "sha256": "1d963c14d48eda7f689818bc7d399e47f8d25c13bba3a443c10aa12a506d4e71",
+        "csv_sha256": "a69d3153aa2da03daaed25ba1cbc87f1c6c7be6ce6ce050b4b554b750c980023",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1740787200,
+        "last": 1743464700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-04.zip.CHECKSUM",
+        "sha256": "f0b73aab2d9e743f1509ed260dd9df866a40e6b071de762d04fa6304c62281c1",
+        "csv_sha256": "f0a186b918e2199c510e98b2f7c20548d4f3fa9ba19257c19567faa10d1744ac",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1743465600,
+        "last": 1746056700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-05.zip.CHECKSUM",
+        "sha256": "351241db1bfa5dc68db0b9c01138c9dbe67061ac4a6b79e75ee202ce77d40a3a",
+        "csv_sha256": "46db2f1383a6f2d03ca1ef62226f323b20d39e5e9787b69f48b215de48240e95",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1746057600,
+        "last": 1748735100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-06.zip.CHECKSUM",
+        "sha256": "b9f00550392e8fe5ce13a5fe7ddac14d8437e4cbd895eb436b872da56dee5de3",
+        "csv_sha256": "6034fc0acfc5fa6e5a208c10f5aafd7ee9cc41bcd07882e2c7d65bcb8e53d205",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1748736000,
+        "last": 1751327100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-07.zip.CHECKSUM",
+        "sha256": "ade38e0896c0b06c6d865f9d70fbacbe603e998f156b075d77897db7869c9010",
+        "csv_sha256": "8e1e9e37cae0559bf3a449c406320ee9404b77041d103f567b5eaa5758d2a3e6",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1751328000,
+        "last": 1754005500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-08.zip.CHECKSUM",
+        "sha256": "8a1a1a310c49c5f72fa60b551efe4f29bf555415a958c72449ff588dd6abffad",
+        "csv_sha256": "4f671c359997aa885461b3290e409d59d7d4bd9e2219e3bdf555b57480516d9f",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1754006400,
+        "last": 1756683900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-09.zip.CHECKSUM",
+        "sha256": "f706421d7c1f65b9a20222d181020347dfdb0f470e39ab916bfa7a30ad8c25a7",
+        "csv_sha256": "9f37a5514a34b11ff604ba6bc88258e4c780254b5b35a0bf3d75263d59b595c8",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1756684800,
+        "last": 1759275900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-10.zip.CHECKSUM",
+        "sha256": "94c6068e0a635f6d3491ef3267739e540904c8d1a85a37500e474c4ad4155631",
+        "csv_sha256": "862f0f082c0f89fa148d5ae5ad81cdbff2828d3ee1680518bdddf4b499826f85",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1759276800,
+        "last": 1761954300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-11.zip.CHECKSUM",
+        "sha256": "a31a7a128e7cf14e46d64450577b782a3844570ee1e8a182d6ff6e7421c88420",
+        "csv_sha256": "dfb98d5a96b549f1f83f15ac78a66c5430577da02afe92246443b46bcc3add21",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1761955200,
+        "last": 1764546300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2025-12.zip.CHECKSUM",
+        "sha256": "bbea1a51d1de3088ddea8492b7f17e6e8b3d6671c46a216121bde38989b57adf",
+        "csv_sha256": "5914378fc447a9bc7d39ed483ef50c7e96cd554b4508fea1092679a89a685a4a",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1764547200,
+        "last": 1767224700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-01.zip.CHECKSUM",
+        "sha256": "e79980819c3be4136f3ce524c1a83d729b9195efe432c827b9847e2a5cf7ba6b",
+        "csv_sha256": "a3d8ebee17a22d055ad0c3ef5137c776b750f7c004413acbef77e63e0cf38a6d",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1767225600,
+        "last": 1769903100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-02.zip.CHECKSUM",
+        "sha256": "5b04e45b467b06300c19fd031f4ae1876604ce5f02a5e4cf81bd57cd95d9ea4c",
+        "csv_sha256": "41eee25b2f3aa1a3b98850825b375563bfe31a4dd4d3915ae0487622396fe607",
+        "checksum_verified": true,
+        "rows": 2688,
+        "first": 1769904000,
+        "last": 1772322300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-03.zip.CHECKSUM",
+        "sha256": "3ae50070daea916f8e13e81a31a4ec0b70d71982dd237249c154f0cc3382cb61",
+        "csv_sha256": "9c18f4e8a2c0b1e3484988214bd73181867732554b604d92625272f404db5d6c",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1772323200,
+        "last": 1775000700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-04.zip.CHECKSUM",
+        "sha256": "156880b8d92d1dde2f04c6b160017db0dc04580b843bed921bb613d312716aca",
+        "csv_sha256": "fbee1906f4a07f006e5bdaaf689f8dbe39ebf4635a4e6ef7595d2bcdce454ea4",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1775001600,
+        "last": 1777592700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-05.zip.CHECKSUM",
+        "sha256": "4d190d6a61dd01f8a2379926b70f845429ee14e6cab90988794d72bc9793d561",
+        "csv_sha256": "ba31d226aab57b70385032cf96778a293c02762a904ed61b03f49aa881376af1",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1777593600,
+        "last": 1780271100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-06.zip.CHECKSUM",
+        "sha256": "998d582022466cff58c808846a9bf0ddbc5887b9d7a3210779abf5d3603d6f48",
+        "csv_sha256": "422487a5bb8e8af0520cf312d11bda9cd0e6ae8558cdac8c1c50d6e8b87eb996",
+        "checksum_verified": true,
+        "rows": 2784,
+        "first": 1780272000,
+        "last": 1782863100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-07.zip.CHECKSUM",
+        "sha256": "65177551a39dd4afd7d1f2d595df7d5498153ea6f060fddeec2a3f9eaff9c991",
+        "csv_sha256": "0f9ca220a372df4e11015f8818cab93dcb27b44a019e8e2775d947e0b04f2a9c",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1782864000,
+        "last": 1785541500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-08.zip.CHECKSUM",
+        "sha256": "9b4bf5e38fbe1c9f52c0442ea797d97c010cb0d65cd5bcb3fa0c1d34341b350e",
+        "csv_sha256": "b9170f5576811310ebefc65692ff3cf1519c2573775d188bb7d744b97e12b95b",
+        "checksum_verified": true,
+        "rows": 2976,
+        "first": 1785542400,
+        "last": 1788219900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-09.zip.CHECKSUM",
+        "sha256": "dd4c572f1381cf9ef68e06f1fe3ba2c0b5462a7e37890a5923d687b6ed9c90c9",
+        "csv_sha256": "561f09cb369c9170b43e1765fca86c8b7bb050255b9efc66c8ceefc695bcb71d",
+        "checksum_verified": true,
+        "rows": 2880,
+        "first": 1788220800,
+        "last": 1790811900
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-10.zip.CHECKSUM",
+        "sha256": "7cf04d270f8a93e51a0c95dc8083f873a9159fae5bdcdeed96cf394d4e429699",
+        "csv_sha256": "4ea5758d18e3159b14be0448cd8f73b5516d61961a8f09d2d3b169582404b6d8",
+        "checksum_verified": true,
+        "rows": 2784,
+        "first": 1790812800,
+        "last": 1793490300
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-01.zip.CHECKSUM",
+        "sha256": "c04d707e899c489ba68f6fd7c6746bde5f0f02b69df28c8c33f6496aa467d5e6",
+        "csv_sha256": "526bfff94f82b5e0601702df6fb7cad7c1a63a20d75fdaead888d7d9cf592910",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793491200,
+        "last": 1793576700
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-02.zip.CHECKSUM",
+        "sha256": "5ec1fa884049474d53e180b5900c019b5fd9998714ffe43c3b07016e64673760",
+        "csv_sha256": "dacb14688679f033c08167685e1c96eb43b68d04bf7a8072dafaf7952977ab26",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793577600,
+        "last": 1793663100
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-03.zip.CHECKSUM",
+        "sha256": "93f198624da7c0b93cc12aa9a93e67e36f830a360d1261d3af172311014ec625",
+        "csv_sha256": "2fe4eb9f80dbd09821101ca6822df328d3edbac300f445c24b0fd49f57d7dd40",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793664000,
+        "last": 1793749500
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/SOLUSDC/15m/SOLUSDC-15m-2026-11-04.zip.CHECKSUM",
+        "sha256": "e6953963cae7498d78f91df01ee3a9042cf5c6ee3c27f0001cafb475a1e98bb0",
+        "csv_sha256": "6bcf02f72841bb8246fc812d730a779465272a94b081ab0a71a29dffabbf6fe9",
+        "checksum_verified": true,
+        "rows": 96,
+        "first": 1793750400,
+        "last": 1793835900
+      }
+    ],
+    "funding": [
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-01.zip.CHECKSUM",
+        "sha256": "61a29967a75eb088b711f47f0e5869b495322bc12cbd2f9a85c01cb6cee2abaa",
+        "csv_sha256": "b737d94226c518c55cd9b6a66eb77c52b363c9ee0d86a151943dd4a4f878f368",
+        "checksum_verified": true,
+        "rows": 88
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-02.zip.CHECKSUM",
+        "sha256": "52ed573420355be66253edb8e121a5a98d2fe087afbc58bd9f5f07c3eb84933c",
+        "csv_sha256": "803d3f6ac170690c2248a9307ca06e3326629cd624e487ffd15b7815a605c532",
+        "checksum_verified": true,
+        "rows": 87
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-03.zip.CHECKSUM",
+        "sha256": "7cd62a8a645eb52ad40866cd3e5a94c1f35ea712145c1fc3cd152b837198f559",
+        "csv_sha256": "0a70162f0c3a0f0cb00a82e6c58af6189fa592a1ebf1a5dc201950c3875971b1",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-04.zip.CHECKSUM",
+        "sha256": "ce55f47cb03c9da88c03be806eb63ccbc17706013efcbaff8a4ebf1477d8a485",
+        "csv_sha256": "be1d42721f3dee7dd09c06c7bc6415eff1b05eb89c44c7761c5b7b2e99789aae",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-05.zip.CHECKSUM",
+        "sha256": "0576ab676bf5ab30a1ee85ccf20c29e2f045614ce14bd767e29a075f90f3df11",
+        "csv_sha256": "7104651f31386ae512dd3aa690a71f7108ace1bac42c9fcb7150f3eff654149c",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-06.zip.CHECKSUM",
+        "sha256": "683b1b22ab2206ad97412b9458bcae872ad3aec0cd49b52eeae79e7f902e3ac1",
+        "csv_sha256": "a95c8e42e430deebf530d70d5d9fe668989896261c59aa7f4a610238058e0284",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-07.zip.CHECKSUM",
+        "sha256": "f8f3805b6471a51d618d23db3913878a72d83411ebd5476fee919a7b0a4278df",
+        "csv_sha256": "3072cd2264ef29710b1d590d22ab1fcb519bbcf70d9e4f401f50e3dfd74f9a01",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-08.zip.CHECKSUM",
+        "sha256": "4180cac29f3d91beb59e33c0c69d8e3f5544782d8104e007b14e69f907f827b3",
+        "csv_sha256": "5db498c42ba57cba5c13417a86bb9b3cddfb0b0d0904d63047361065cd39a39e",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-09.zip.CHECKSUM",
+        "sha256": "5d9cb6aadf947c05ba60eb1416a4ad21237f9290514dc0b9b95ab7a24b7491c5",
+        "csv_sha256": "e109d8c5b88732a8eb20f1169f48437591db61fb0a278bdb905dbac2144a0694",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-10.zip.CHECKSUM",
+        "sha256": "cb8f843f384d998ef95f7d66fda45b173874cf6d5096b9dca3efb15ac9c34958",
+        "csv_sha256": "aa8b8629cc741bf9df02da571ab8fde1e80b932204bc1bc9fa43b795d0b68fb2",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-11.zip.CHECKSUM",
+        "sha256": "d9380c98efc1bac7804b21fb4a1ae0dbab1c408e032d48b8e9b97b4dd2eff659",
+        "csv_sha256": "b7c841df21be420b86be09c14265e4ed2f485902b2fe107b7c36817c28f3f908",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2024-12.zip.CHECKSUM",
+        "sha256": "48f4807e4e6c40ce2228d23127a714d747d856c4dd810d4eb7869c95e8de71c4",
+        "csv_sha256": "3d8f66898d96a056f5961d3a9e9873b041721af5e7f356cac64d358050bd89f1",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-01.zip.CHECKSUM",
+        "sha256": "5b863fe811531a0a4e3af8f0aeca11114b5670955b497af6843b5185029e4ac7",
+        "csv_sha256": "e71e554209412e047ae11e628165e42260658b94810179bd6637044dd2943a50",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-02.zip.CHECKSUM",
+        "sha256": "c72c489311f48b1ce4e37a96a9dc506f08cba98816f28aa374dc70c3ea597e7e",
+        "csv_sha256": "0a25743bb23712e9dc4e8ca5ebf58779e3acc449a132bb232e0f99b309c2f2ec",
+        "checksum_verified": true,
+        "rows": 84
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-03.zip.CHECKSUM",
+        "sha256": "a531479069e83d8b9d036fcb116bbda4848ea08460c29b27c9dd79eb4b6a030e",
+        "csv_sha256": "e60fbcff7fc9ed4889466b0675a5670332b42d80cf47eeded119a3ef14a879bf",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-04.zip.CHECKSUM",
+        "sha256": "0a670ff3f87ab945d7896ba8ff1be3a83fdf19d9a7468d3eafe22de72c2853ae",
+        "csv_sha256": "a9dee7b6ea6ce1ef99c6c6142688013e37a8add046b3930361b9df096ba81432",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-05.zip.CHECKSUM",
+        "sha256": "e7039db68bd79ce219690483aa79df77695b9c480fa48e5899c697d62109385e",
+        "csv_sha256": "2266e605a0838deafe6722312bf99b0d5389f56af142860eab994d7a10d9ab89",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-06.zip.CHECKSUM",
+        "sha256": "918004762cee1ad9f70d5c32ab8c2743f2ed3ab8d5b81d41e7ec9edc874caafd",
+        "csv_sha256": "b9ea597ab93c106182e0b468cf32553d3773a5a7c649ee30a18a02f7d1cf3337",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-07.zip.CHECKSUM",
+        "sha256": "44caa75df0ec9c9cda576c530981b14cbf6c7bb077ecced2a4936c2b7ba8db34",
+        "csv_sha256": "424ff37612fa1788bd46edd6f61823b7ce51f731eebb626f3b1c8af8d667ab54",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-08.zip.CHECKSUM",
+        "sha256": "96ac8c99227be65fba4cc72ad9cea9572794fbdcdd0fe456d13c2f9f5a905ec6",
+        "csv_sha256": "db2399823e705760d1783fd848f85cf5a812784ec36fd2a6310ca312e579c7ab",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-09.zip.CHECKSUM",
+        "sha256": "b0beff5f68027982c5d1eb72953c73dbc478acad82e1be874589fb5b606fac5b",
+        "csv_sha256": "0817961cd17307e253849c82d9f1291664a9a6f7d179b14610e9a69455c4c48b",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-10.zip.CHECKSUM",
+        "sha256": "8a92e5fb0df860e02c8eb10c6ea5c370d2e060fcb35046412e1ef86659f05886",
+        "csv_sha256": "f208291939add7aaf1f72912bec6d3d3949d91f6bef80e71e0f993a09bc6f8f9",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-11.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-11.zip.CHECKSUM",
+        "sha256": "f42e8845ad054cc8041807492747c4f40c9e697b80f607d93b1502c4c36944cf",
+        "csv_sha256": "267c70ff43403b086ff18e275be01a995134b3932c7e4495a7f01f17308bc1d8",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-12.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2025-12.zip.CHECKSUM",
+        "sha256": "2ac1d7337edf98339406ce187c30b518ccb20142895de5e61932ce67d9eb91e9",
+        "csv_sha256": "bb03439aa6157b5b1fb6668da55b6b09dd5befe77a4fbfb0da5d1ab359fb5397",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-01.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-01.zip.CHECKSUM",
+        "sha256": "ae07287592a3d37fc32d8b088c25645f1703b65b9d2ad747826140f5149a9326",
+        "csv_sha256": "4614b5c7cef44028d0225aa283b7f79aa892a9e151b30e53e9f9edb7f32fe7c5",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-02.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-02.zip.CHECKSUM",
+        "sha256": "422ea7656023c14d8bb9ec8e91b355ded04bd96bee5780abb505cb66549eafc8",
+        "csv_sha256": "efc806efd6aa4f31f5e5009b683110ecd48d8780cef8e8c358a9148ef889efb2",
+        "checksum_verified": true,
+        "rows": 84
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-03.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-03.zip.CHECKSUM",
+        "sha256": "5004cbf0e4cd3982951baea2837f639647bd0f9f3f1fd83a990016d6e139c124",
+        "csv_sha256": "14d1ac2417c588db096315dadfe639974997a22950c313f5697efe6648423e5d",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-04.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-04.zip.CHECKSUM",
+        "sha256": "bb9dc87af017bdee47825c254c59ddada880492ea827b829db1cd73ebb8de8de",
+        "csv_sha256": "f2946c075f202cb392955ae8ac9a2844a934a6a74a57493b109061b45afb8fe2",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-05.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-05.zip.CHECKSUM",
+        "sha256": "724cb25ce7ba3682bb0ca0fa3f4293586481eae709eb78df72061f480ab89ec9",
+        "csv_sha256": "760730fef4c62b04a539b617e848168e532af3204ed2bc29982a6affb8e250db",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-06.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-06.zip.CHECKSUM",
+        "sha256": "01f5f75dd7b51d20979f7b0bd668d18e7bf7b4c524981226f8eac40209d7de13",
+        "csv_sha256": "9870a579c6a97f09a0f9c04fe28f660ae939a6bbb39c54f4e2ea1874b5eec775",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-07.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-07.zip.CHECKSUM",
+        "sha256": "d8ca5ab758ef865cb69b0eca1649c8110858e8f1a1adc923a37bf6d2b6cf6e7e",
+        "csv_sha256": "a98f41f1296d480fd93a2b5d7f3f6e9d14c70caef592bc7e354b9d798047532d",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-08.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-08.zip.CHECKSUM",
+        "sha256": "dd066dd74c41804835e9c1813122dfeb1d35d76f7bf1963b22348103257dd51d",
+        "csv_sha256": "f2aa02521aa5d913d66faed824e47c10044a9b1b73e8d8c23f08a09e0fe050f4",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-09.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-09.zip.CHECKSUM",
+        "sha256": "5b5c586221669ac3f3c34a36c5e0b0838a4d30322d9e1995f29d769d9c6be658",
+        "csv_sha256": "f492a79c094f2ffdfcca6880fd34d772d5d6c1ca88d6cfecec974884e32c1632",
+        "checksum_verified": true,
+        "rows": 90
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-10.zip",
+        "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOLUSDC/SOLUSDC-fundingRate-2026-10.zip.CHECKSUM",
+        "sha256": "02654cd573e8f36ae8ec7220cbd9b9680c8d5aa5b9d9d98621f379e28b684c01",
+        "csv_sha256": "a1b480cacd70def2dc214d480def682dcf6a5f280adb753951674e3172a6e00a",
+        "checksum_verified": true,
+        "rows": 93
+      },
+      [
+        {
+          "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=SOLUSDC&startTime=1793491200000&endTime=1793836799999&limit=1000",
+          "response_sha256": "b814da4ddf5c8c2103a028af8291b62aa943a0f9c794fd8b62c339993895712f",
+          "checksum_verified": false,
+          "integrity": "response_sha256_only",
+          "rows": 12
+        }
+      ]
+    ]
+  },
+  "rest_repairs": [
+    {
+      "dataset": "klines",
+      "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDC&interval=15m&startTime=1793145600000&endTime=1793231999999&limit=96",
+      "response_sha256": "c88960915c60439871dbd99f45e27085cbec049032de53417a17e65f0798b3e9",
+      "integrity": "response_sha256_only",
+      "checksum_verified": false,
+      "reason": "Day missing from both official daily and monthly archives; observed official REST repair",
+      "selected_utc_day": "2026-10-28",
+      "rows": 96,
+      "first": 1793145600,
+      "last": 1793231100
+    },
+    {
+      "dataset": "markPriceKlines",
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=SOLUSDC&interval=15m&startTime=1782691200000&endTime=1782777599999&limit=96",
+      "response_sha256": "9a63d5dd24e22483798e8275e2b3207812793168dfebe616c912264e40a6a1ee",
+      "integrity": "response_sha256_only",
+      "checksum_verified": false,
+      "reason": "Day missing from both official daily and monthly archives; observed official REST repair",
+      "selected_utc_day": "2026-06-29",
+      "rows": 96,
+      "first": 1782691200,
+      "last": 1782776700
+    },
+    {
+      "dataset": "markPriceKlines",
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=SOLUSDC&interval=15m&startTime=1793145600000&endTime=1793231999999&limit=96",
+      "response_sha256": "4999deb59a8d60f36b29c246daf8b57490b614eb072e13c85631c53e50a6558f",
+      "integrity": "response_sha256_only",
+      "checksum_verified": false,
+      "reason": "Day missing from both official daily and monthly archives; observed official REST repair",
+      "selected_utc_day": "2026-10-28",
+      "rows": 96,
+      "first": 1793145600,
+      "last": 1793231100
+    },
+    {
+      "dataset": "markPriceKlines",
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=SOLUSDC&interval=15m&startTime=1793232000000&endTime=1793318399999&limit=96",
+      "response_sha256": "31ba8faf7abb54c358f62269f0a775429c59c57d5b3cb9fc6de62d219897fd6a",
+      "integrity": "response_sha256_only",
+      "checksum_verified": false,
+      "reason": "Day missing from both official daily and monthly archives; observed official REST repair",
+      "selected_utc_day": "2026-10-29",
+      "rows": 96,
+      "first": 1793232000,
+      "last": 1793317500
+    }
+  ],
+  "integrity": "Available archive ZIPs verified against published SHA-256; REST repairs have response hashes only.",
+  "observed_first_trade_utc": "2024-01-04T12:45:00+00:00",
+  "observed_first_mark_utc": "2024-01-03T00:00:00+00:00",
+  "warmup_note": "Available trade history starts January 4, 2024 at 12:45 UTC, while mark history starts January 3. Aligned full UTC days begin January 5; no synthetic January 1-4 trade history. The daily-60 warmup completes inside development, around March 6, 2024. The public metadata onboard time is not used to invent missing candles.",
+  "fee_assumption": 0.0005,
+  "maintenance_margin_assumption": 0.025
+}

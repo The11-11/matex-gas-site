@@ -1,0 +1,157 @@
+{
+  "frozen_utc": "2026-11-05T21:23:31.845161+00:00",
+  "protocol_version": "matex-sol-usdc-daily-momentum-20261105-v1",
+  "instrument": {
+    "market": "SOL",
+    "symbol": "SOLUSDC",
+    "venue": "Binance USD-M Futures",
+    "contract_type": "PERPETUAL",
+    "quote_asset": "USDC",
+    "margin_asset": "USDC",
+    "settlement_asset": "USDC",
+    "price_tick": 0.01,
+    "research_specs": {
+      "sz_decimals": 2,
+      "max_leverage": 20.0,
+      "maintenance_margin_rate": 0.025,
+      "min_notional": 5.0
+    }
+  },
+  "candidate_descriptions": {
+    "solm_control": "Control: daily ROC7/ROC28 transition from non-aligned (zero state) to both positive for long or both negative for short; no direct opposite-alignment flip. Stop1.5x daily ATR14, target3x ATR14, maximum672 bars (7days). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_confirm2": "Two-day confirmation: current and previous daily ROC7/ROC28 align in the same nonzero direction, and alignment two days ago was zero. Stop1.5x daily ATR14, target3x ATR14, maximum672 bars (7days). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_deadband": "Momentum deadband: ROC7>2% and ROC28>4% for long, ROC7<-2% and ROC28<-4% for short; enter only on transition from zero to a nonzero deadband state. Stop1.5x daily ATR14, target3x ATR14, maximum672 bars (7days). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_capital_fit": "Control entry with capital-fit brackets: stop1x daily ATR14, target2x ATR14, maximum672 bars (7days). The narrower bracket may improve minimum-order eligibility but can stop out more often. Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_hold72h": "Control entry with shorter funding exposure: stop1.5x daily ATR14, target3x ATR14, maximum288 bars (72hours). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_trend_quality": "Control entry only when daily close is beyond EMA30 in the entry direction and EMA30 has moved in that direction over the preceding five days. Stop1.5x daily ATR14, target3x ATR14, maximum672 bars (7days). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_pullback": "Continuation: current ROC7/ROC28 align; long when RSI2 recrosses20 upward and close>EMA30, short when RSI2 recrosses80 downward and close<EMA30. Stop1x daily ATR14, target2x ATR14, maximum288 bars (72hours). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold.",
+    "solm_funding_filter": "Control entry only when side times the lagged trailing24 settled-hour mean signed funding is <=0.000025 per hour. Rates belong to their published ending interval; use only events at least1hour before daily decision, require contiguous interval history, weight any oldest partial interval, and reject missing/stale history (latest age>latest interval+1hour). Stop1.5x daily ATR14, target3x ATR14, maximum672 bars (7days). Completed UTC daily levels, at least 60 prior complete days, next-15m-open entry; all UTC entry hours and overnight positions allowed. Target reward must be at least 3 times signal-close roundtrip 0.05% fees plus 2bps slippage per fill. The simulator separately charges fees, signed funding and slippage and reserves funding for at least 24 hours or the full maximum planned hold."
+  },
+  "control_id": "solm_control",
+  "windows": {
+    "development": [
+      "2024-02-01",
+      "2025-07-01"
+    ],
+    "validation": [
+      "2025-07-01",
+      "2026-01-01"
+    ],
+    "reused_test": [
+      "2026-01-01",
+      "2026-10-01"
+    ],
+    "reused_recent": [
+      "2026-10-01",
+      "2026-10-21"
+    ],
+    "later_check": [
+      "2026-10-21",
+      "2026-11-05"
+    ]
+  },
+  "base_config": {
+    "starting_cash": 20,
+    "leverage": 5,
+    "fee_rate": 0.0005,
+    "slippage_bps": 2,
+    "risk_fraction": 0.05,
+    "margin_fraction": 0.75,
+    "max_notional": 150,
+    "min_notional": 5.0,
+    "sz_decimals": 2,
+    "maintenance_margin_rate": 0.025,
+    "max_leverage": 20.0,
+    "fallback_hourly_funding": 1.25e-05,
+    "stress_hourly_funding": null,
+    "daily_loss_fraction": 0.15,
+    "equity_floor": 5.0,
+    "max_entries_per_day": 2
+  },
+  "schedule": {
+    "flatten_daily": false,
+    "entry_cutoff_hour": 24,
+    "max_hold_bars": 672,
+    "funding_reserve_full_hold": true
+  },
+  "leverage": 5,
+  "cases": [
+    "baseline",
+    "stress"
+  ],
+  "stress": {
+    "slippage_bps": 8,
+    "adverse_hourly_funding": 0.0001,
+    "settlement_scaling": "Multiply hourly stress by each actual published settlement interval; never charge off-calendar."
+  },
+  "comparisons": {
+    "fresh_window_runs": 80,
+    "continuous_runs": 16,
+    "csv_rows": 96,
+    "full_detail_files": "12 if selected candidate is control (or none); 24 if selected differs. These repeat already listed cases and add no independent evidence."
+  },
+  "selection": {
+    "eligible": "Baseline only: positive development and validation P&L with at least 30 completed trades in EACH. Rank eligible cases by validation net P&L, then trade count, then declared order.",
+    "failed_fallback": "If none qualifies, the best validation case with at least 30 validation trades is labelled failed_screen_fallback, never a passing strategy.",
+    "insufficient": "If none has 30 validation trades, display highest validation net P&L with any validation trades as insufficient_sample. If none trades, select nothing.",
+    "forbidden": "Later periods, stressed costs and continuous outcomes cannot change ranking, parameters, leverage or dates."
+  },
+  "consistency": {
+    "all_periods_positive": "Strictly positive net P&L and at least one completed trade in every fresh window. No-trade and breakeven cells fail.",
+    "strong_min_trades": {
+      "development": 30,
+      "validation": 30,
+      "reused_test": 20,
+      "reused_recent": 3,
+      "later_check": 3
+    },
+    "continuous": "Separately require every close-marked boundary-equity delta to be positive, without resetting the account.",
+    "stress": "Apply identical positivity and sample rules to stressed results, separately from baseline."
+  },
+  "continuous": {
+    "start": "2024-02-01",
+    "end_exclusive": "2026-11-05",
+    "starting_cash_usdc": 20,
+    "boundary_resets": 0
+  },
+  "warmup": {
+    "source_first_full_day": "2024-01-05",
+    "prior_complete_days": 60,
+    "earliest_signal_day": "2024-03-05",
+    "earliest_signal_close_utc": "2024-03-06T00:00:00+00:00",
+    "earliest_entry_utc": "2024-03-06T00:00:00+00:00",
+    "inside_development": "No-entry warmup remains in development; dates and collateral are not reset or shifted."
+  },
+  "funding": "Use all expected native settlement timestamps and their published interval hours. Observed rates apply once to the entire interval, on carried positions at settlement open. New entries after that instant do not pay the preceding interval.",
+  "funding_price": "Same-venue mark-candle open approximation for every payment; exact REST settlement marks are not used by this study.",
+  "minimum_order_comparison": "Native SOLUSDC minimum $5 vs prior mixed-venue proxy $10. Same $20 starting collateral; this changes feasible trades and prevents attributing performance only to the quote asset.",
+  "maintenance_margin": "2.5% conservative research assumption; not a verified historical Binance bracket series.",
+  "limitations": [
+    "All five calendar periods have already been examined in earlier proxy studies. This focused round is adaptive historical research, not untouched or prospective confirmation.",
+    "Eight fixed cases include the unchanged daily-momentum entry control and seven declared modifications. No parameter, leverage or date search is performed after this round sees returns.",
+    "Native Binance SOLUSDC trade candles, mark candles and published funding are used together. This is not SOLUSDT relabelled as USDC and is not a reconstruction of Hyperliquid execution.",
+    "The native $5 minimum opening notional, $0.01 price tick, 0.05% taker-fee assumption and native funding calendar differ from the prior $10-minimum mixed-venue proxy. Performance changes cannot be attributed only to USDC quoting.",
+    "The 0.05% taker fee per fill is a conservative research assumption with no promotional, VIP or BNB discount. It is not an account-specific fee quote.",
+    "Maintenance margin is held at a conservative research assumption of 2.5%; Binance historical leverage brackets are not reconstructed. Isolated liquidation loses remaining collateral and absorbs any clearance cost within that loss rather than debiting unrelated free cash.",
+    "Funding rates are whole published settlement-interval rates, charged only at the declared native settlement times. No hourly charges are invented between native settlements.",
+    "Every funding payment uses the same-venue mark-candle open as the settlement-price approximation, including dates where REST also supplies a precise settlement mark. No unavailable historical price is invented.",
+    "Funding stress and missing-rate fallback are hourly assumptions multiplied by the actual published settlement interval. The strict native loader rejects undeclared gaps instead of substituting another market.",
+    "Signals use completed UTC days and enter at the next 15-minute open. Funding-filter decisions use only sufficiently lagged settled funding; no future rate selects a trade.",
+    "Public onboarding metadata differs from observed trade coverage: marks begin January 3, 2024 at 00:00 UTC, metadata onboarding is January 3 at 12:45 UTC, and trades begin January 4 at 12:45 UTC. The first aligned complete day is January 5. The partial aligned day is excluded, and daily warmup remains inside development without shifting dates or fabricating earlier candles.",
+    "Positions may cross midnight for up to seven days. Sizing reserves funding for at least 24 hours or the full maximum planned hold. Actual losses and funding can exceed that planned risk estimate.",
+    "Stops and targets are rounded to the native tick, against profitability. Average taker fill prices may lie between ticks. Failed stops, latency and depth are unavailable.",
+    "Known open exits precede later intrabar mark extremes. Unknown intrabar ordering is conservative: liquidation before stop, stop before target. Drawdown is close-marked, not tick-by-tick.",
+    "Each fresh window starts with $20 USDC and finishes flat. Continuous cases start once and carry positions and equity through all five boundaries, without cash or funding resets.",
+    "Continuous period changes are marked-equity deltas including open positions. Fees and funding are reported for the full account rather than incorrectly allocating aggregate trade funding to exit periods.",
+    "Positive P&L with one trade per period is only a strict descriptive screen. The stronger sample screen requires 30 development, 30 validation, 20 long-test and three trades in each short window; even those short samples are weak evidence.",
+    "Adverse-cost stress changes sizing as well as fills and funding; it is not a cost subtraction from an unchanged set of baseline trades.",
+    "The $20 is assumed already funded collateral. USDC acquisition, deposits, withdrawals, bridging, network fees, conversion, depeg and tax costs are excluded.",
+    "USDC quoting and settlement support Circle ecosystem alignment but do not establish a Circle integration, endorsement, partnership, sponsored gas flow or grant award.",
+    "Simulation only. No wallet, signatures, fund transfers, trading permissions or real exchange orders are used. Historical profit cannot establish future profitability."
+  ],
+  "sources": {
+    "archives": "https://github.com/binance/binance-public-data",
+    "exchange_info": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Exchange-Information",
+    "funding_history": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History"
+  }
+}
