@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title description">
+  <title id="title">MATEx GAS double-M symbol</title>
+  <desc id="description">Two joined geometric M letters in a emerald-to-mint gradient, with a transparent background.</desc>
+  <defs>
+    <linearGradient id="monogram" x1="40" y1="174" x2="216" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76DEA7"/>
+      <stop offset=".48" stop-color="#A3E4A8"/>
+      <stop offset="1" stop-color="#D2F2B4"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 184V76H62L87.5 116L113 76H135V184H111V119L87.5 155L64 119V184Z M121 184V76H143L168.5 116L194 76H216V184H192V119L168.5 155L145 119V184Z" fill="url(#monogram)"/>
+</svg>
