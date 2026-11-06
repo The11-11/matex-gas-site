@@ -15,6 +15,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 ## Scope
 
 - Responsive project landing page and printable project brief.
+- Sentinel preventive security description and icon: local owned-source review, pinned Arc observations and requested transaction preflight through a separate five-tool MCP preview. Opt-in page-open polling; no deployed background monitor, wallet-wide interception or automatic remediation. See `dist/docs/sentinel.md`.
 - Developer feature status, three local agent skills, the 15-tool MCP preview and downloadable developer notes.
 - Registered-agent policy budgets and Arc USDC paid reports through a separate four-tool local connector, with live wallet proof clearly marked pending.
 - A documented US/USD Funding hub: installed local Circle Onramp Kit 1.0.8 sandbox integration, a separate external Arc Portal handoff and explicit off-ramp limits. Live provider-session and deposit proof remain pending.
@@ -67,13 +68,20 @@ underlying tMGAS retains owner-controlled minting. Exact allowance, wrap and
 unwrap actions require separate human wallet review and native Arc test-USDC
 gas. Arc assets remain separate from Base-funded service credits.
 
-Eight isolated EVM tests and twenty-one controller tests passed internally (29
-focused checks). A bounded deployment-recovery review keeps the original sender,
-chain, creation data, zero value and nonce; it retains up to three candidates.
-Only an explicit human review can open MetaMask. A canonical receipt from any
-matching candidate resolves that one deployment. Internal review identifiers are
-not transaction hashes. This
-is not an independent audit. **Live deployment verification is pending.** No
+The wallet page now offers explicit EIP-6963 MetaMask selection, a visibly
+unverified legacy fallback and read-only provider diagnostics for account access,
+network, block, nonce and native balance. It records safe request stages and
+error categories. User inputs are captured before the busy render can change
+their displayed values.
+
+Eight isolated EVM tests, twenty-nine controller tests and eighteen wallet tests
+passed internally (**55 focused checks**). Bounded same-nonce recovery retains
+up to three candidate plans. At that limit, the owner can review and reopen the
+exact saved candidate without changing its nonce, gas, gas price or maximum
+fee. No financial request starts automatically. A canonical matching receipt
+resolves that one deployment. Internal review identifiers are not transaction
+hashes. These checks are not an independent audit or proof of a live MetaMask
+prompt. **Live deployment verification is pending.** No
 verified deployment, wtMGAS pool, market-trade proof, mainnet release, USDC peg or
 cash-redemption promise is claimed. No new MCP wrapping tools are claimed. Public status is documented at
 `/developers.html#wrapped-mgas` and in the downloadable developer notes; private

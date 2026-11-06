@@ -44,15 +44,29 @@ allowance, wrapping and unwrapping as separate human-reviewed MetaMask actions.
 Native Arc test USDC pays their network gas. Balances, backing, wrapped supply
 and surplus are checked at a matching block checkpoint.
 
+Wallet selection now uses EIP-6963 discovery with explicit MetaMask selection;
+legacy injection remains visibly unverified and is not selected automatically.
+Read-only diagnostics inspect the selected provider's existing account access,
+network, block, latest nonce and native balance. Safe request stages and error
+categories distinguish an outstanding request from a completed transaction.
+User input is captured before a busy render can overwrite an address, selected
+wallet, acknowledgement or reconciliation hash. Diagnostics do not request an
+account signature or transaction.
+
 Interrupted deployments retain their original sender, chain, creation data,
 zero value and nonce. An explicit same-nonce recovery review can retain up to
 three candidate plans, with a fresh network-fee review and human MetaMask
 approval. The controller never advances to a new nonce automatically, and only
-a matching canonical receipt resolves the saved action. Internal review IDs
-are not MetaMask transaction hashes.
+a matching canonical receipt resolves the saved action. After the three-candidate
+limit, an explicit review can reopen the exact saved candidate with its nonce,
+gas, gas price and maximum fee unchanged. This neither creates another candidate
+nor enables an automatic resend. Internal review IDs are not MetaMask transaction
+hashes.
 
-Internal validation passed **eight isolated EVM tests and twenty-one controller
-tests (29 focused checks)**. This is not an independent audit. **Live deployment verification is
+Internal validation passed **eight isolated EVM tests, twenty-nine controller
+tests and eighteen wallet tests (55 focused checks)**. These checks are not an
+independent audit or evidence that a live MetaMask deployment prompt has succeeded.
+**Live deployment verification is
 pending**; no verified deployment, wtMGAS liquidity pool, market trade or mainnet
 release is claimed.
 The 1:1 token claim does not establish a USDC price, cash redemption or resale
