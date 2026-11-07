@@ -15,6 +15,7 @@ Open the printed loopback URL. Source is in `dist/`. Run `node check.mjs` to ver
 ## Scope
 
 - Responsive project landing page and printable project brief.
+- MATEx Coin/USDC local liquidity-lab status, separate from the MGAS gas mechanism: 71 focused internal checks, approved test seed, owner-paid setup and pending public execution. See `dist/docs/matex-coin-pool.md`.
 - Sentinel preventive security description and icon: local owned-source review, pinned Arc observations and requested transaction preflight through a separate five-tool MCP preview. Opt-in page-open polling; no deployed background monitor, wallet-wide interception or automatic remediation. See `dist/docs/sentinel.md`.
 - Developer feature status, three local agent skills, the 15-tool MCP preview and downloadable developer notes.
 - Registered-agent policy budgets and Arc USDC paid reports through a separate four-tool local connector, with live wallet proof clearly marked pending.
